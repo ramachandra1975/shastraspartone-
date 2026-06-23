@@ -886,5 +886,578 @@ window.addEventListener('DOMContentLoaded', () => {
   showSection(hash && document.getElementById(hash) ? hash : 's-intro');
 });
 </script>
+  <!--
+═══════════════════════════════════════════════════════════════════════════════
+  ADDITIVE INSERT — शास्त्रोद्भवः Part I · Chapters 10–17 (8 new sections)
+  ─────────────────────────────────────────────────────────────────────────────
+  PASTE THIS ENTIRE FILE immediately before </body> in the original HTML.
+
+  ALSO COPY the two blocks below into the original file:
+
+  ① INTO <div class="navgroup"> (after the existing ten .navlink entries):
+  ──────────────────────────────────────────────────────────────────────────
+    <div class="label">विस्तारः · Extended Chapters</div>
+    <a class="navlink" data-target="s-panini-deep">पाणिनि-गाम्भीर्यम् · Pāṇini In Depth</a>
+    <a class="navlink" data-target="s-sphotavada">स्फोटवादः · The Sphoṭa Doctrine</a>
+    <a class="navlink" data-target="s-mimamsa">मीमांसा · Pūrva-Mīmāṃsā as Śāstra</a>
+    <a class="navlink" data-target="s-nyaya">न्यायः · Nyāya &amp; Vaiśeṣika</a>
+    <a class="navlink" data-target="s-shankarameta">शाङ्करभाष्यम् · Śaṅkara's Meta-Śāstra</a>
+    <a class="navlink" data-target="s-vakyapadiya">वाक्यपदीयम् · Bhartṛhari's Vākyapadīya</a>
+    <a class="navlink" data-target="s-practical">प्रयोगः · Practical Transmission</a>
+    <a class="navlink" data-target="s-living-shastra">जीवच्छास्त्रम् · The Living Śāstra Today</a>
+
+  ② INTO <div class="tabbar" id="tabbar"> (after the existing ten .tabbtn entries):
+  ──────────────────────────────────────────────────────────────────────────
+    <button class="tabbtn" data-target="s-panini-deep">पाणिनि-गाम्भीर्यम्</button>
+    <button class="tabbtn" data-target="s-sphotavada">स्फोटवादः</button>
+    <button class="tabbtn" data-target="s-mimamsa">मीमांसा</button>
+    <button class="tabbtn" data-target="s-nyaya">न्यायः</button>
+    <button class="tabbtn" data-target="s-shankarameta">शाङ्करभाष्यम्</button>
+    <button class="tabbtn" data-target="s-vakyapadiya">वाक्यपदीयम्</button>
+    <button class="tabbtn" data-target="s-practical">प्रयोगः</button>
+    <button class="tabbtn" data-target="s-living-shastra">जीवच्छास्त्रम्</button>
+═══════════════════════════════════════════════════════════════════════════════
+-->
+
+
+<!-- ═══ S10 PĀṆINI IN DEPTH ═══ -->
+<section class="section hidden" id="s-panini-deep">
+  <div class="eyebrow">अध्यायः ८ · The Apex of Vedāṅga Grammar</div>
+  <h2 class="title">
+    <span class="dn">पाणिनि-गाम्भीर्यम्</span>
+    Pāṇini's Aṣṭādhyāyī — The Grammar That Is Itself a Śāstra of Śāstras
+  </h2>
+  <p class="lede">No text in the Sanskrit tradition more completely embodies the śāstric ideal than Pāṇini's Aṣṭādhyāyī. It is not merely the most sophisticated grammar ever composed; it is the first fully axiomatic formal system in human intellectual history — a machine for generating all valid Sanskrit utterances from a minimal set of primitives, composed entirely in oral form and memorised for over two millennia without a single rule being lost.</p>
+
+  <div class="panel">
+    <h3>The Architecture of the Aṣṭādhyāyī</h3>
+    <p>The Aṣṭādhyāyī ("Eight Chapters") consists of 3,959 sūtras distributed across eight adhyāyas, each adhyāya divided into four pādas — thirty-two pādas in total. The rules are not arranged by topic (as a modern grammar would be) but in an order optimised for <em>economy of expression</em>: rules are sequenced so that earlier rules can be silently referenced by later ones, allowing a rule that would otherwise require thirty syllables to be expressed in three. This principle — <span class="iast">lāghava</span>, maximum brevity — is Pāṇini's signature and obsession. The entire grammar generates an infinite language from rules whose total syllable count is less than a short Upaniṣadic chapter.</p>
+    <table class="chron">
+      <tr><th>Component</th><th>Sanskrit Term</th><th>Function</th><th>Count</th></tr>
+      <tr><td class="shastra">Main sūtras</td><td><span class="dn">अष्टाध्यायी</span></td><td>The operative grammatical rules</td><td class="era">3,959</td></tr>
+      <tr><td class="shastra">Phoneme inventory list</td><td><span class="dn">शिवसूत्राणि / माहेश्वरसूत्राणि</span></td><td>14 sūtras encoding the 43 phonemes in a sequence designed so that any natural class of sounds can be named by citing a range</td><td class="era">14</td></tr>
+      <tr><td class="shastra">Dhātupāṭha</td><td><span class="dn">धातुपाठः</span></td><td>The canonical list of Sanskrit verbal roots — the generative seed-list of all Sanskrit verbs</td><td class="era">~2,000 roots</td></tr>
+      <tr><td class="shastra">Gaṇapāṭha</td><td><span class="dn">गणपाठः</span></td><td>Named lists of words that behave identically under specific rules — referenced by a list-name rather than repeated individually</td><td class="era">~250 lists</td></tr>
+      <tr><td class="shastra">Uṇādisūtras</td><td><span class="dn">उणादिसूत्राणि</span></td><td>Supplementary rules for irregular nominal derivations; later addition to the Pāṇinian corpus</td><td class="era">~750</td></tr>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h3>Śaṅkara's Metaphor: Pāṇini as the Sūtrātman</h3>
+    <p>Śaṅkarācārya's central metaphor for the relationship between Brahman and the manifest world is the <span class="iast">sūtrātman</span> — "the Self that threads [all things] together" — drawn from the Bṛhadāraṇyaka Upaniṣad (3.7.1), where Yājñavalkya describes the inner controller who, like an invisible thread, holds together the sun, moon, wind, fire, and all beings from within. Śaṅkara glosses this in his Bṛhadāraṇyaka-Bhāṣya: the thread is not the beads, yet without the thread not one bead maintains its place; the thread is present in every bead yet identifiable with none.</p>
+    <div class="sanskrit-block">
+      अन्तर्यामी अयमात्मा — सर्वभूतेषु अन्तर आत्मा, सर्वभूतानि शरीरं करोति ।<br>
+      <span style="font-size:16px;color:var(--gold);">Bṛhadāraṇyaka Upaniṣad 3.7.15 (Śaṅkara's antaryāmin passage)</span>
+    </div>
+    <p>The Pāṇinian grammar maps onto this metaphor with striking precision. The Śivasūtras — the 14 phoneme-sequence sūtras — are the <em>sūtrātman</em> of the entire grammar: an invisible, minimal thread from which every grammatical form is derivable. No single sūtra generates a word; every word requires multiple sūtras acting together, just as every bead is held by the whole thread, not by any single segment of it. Pāṇini's grammar is, in structural terms, an enacted śāstric image of the sūtrātman doctrine.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>The Pratyāhāra System — Naming Natural Classes</h3>
+      <p>The most ingenious technical feature of Pāṇini's grammar is the <span class="iast">pratyāhāra</span> — a notation for naming any natural class of phonemes by citing the first phoneme of the class and the marker-phoneme that closes it in the Śivasūtra sequence. "AC" (<span class="dn">अच्</span>) means "all vowels"; "HAL" (<span class="dn">हल्</span>) means "all consonants" — because in the Śivasūtra sequence, A begins the vowels and the marker L closes them, and H begins the consonants and L closes. This allows a rule that applies to "all vowels" to be written in two phonemes instead of fifteen.</p>
+      <p>The system works only because Pāṇini chose the order of the Śivasūtras with extraordinary care — the sequence is not phonetically natural but mathematically optimised for maximal pratyāhāra efficiency. This is purely śāstric intelligence: the Śivasūtras are not a description of anything external; they are an invented notational tool whose only purpose is to make the rest of the grammar as brief as possible.</p>
+    </div>
+    <div class="panel">
+      <h3>Kātyāyana and Patañjali — The Tradition That Follows</h3>
+      <p>No śāstra exists in isolation; each generates its commentary tradition, which often surpasses the original in scale. Pāṇini's grammar immediately attracted two responses that together constitute the core of the Vyākaraṇa-śāstra:</p>
+      <p><strong style="color:var(--gold-bright);">Kātyāyana's Vārttikas</strong> (~3rd century BCE) — "supplementary statements" that correct, extend, and argue with specific Pāṇinian rules. Kātyāyana is the tradition's first explicit śāstric debater: he identifies rules that are over-inclusive, under-inclusive, or redundant, and proposes emendations. This is śāstra's self-correcting mechanism in action.</p>
+      <p><strong style="color:var(--gold-bright);">Patañjali's Mahābhāṣya</strong> (~2nd century BCE) — the "Great Commentary," a discursive philosophical treatment of every point raised by both Pāṇini and Kātyāyana. Patañjali does not merely comment; he asks <em>why</em> grammar is needed at all, what the relationship between a word and its meaning is (inaugurating the sphoṭa debate — see next chapter), and whether the grammatically correct form is prior to or derived from actual usage. The Mahābhāṣya is simultaneously a grammar commentary and a philosophy of language.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="cl-head">Practical Application — Why This Matters for Mantra Recitation</div>
+    <p style="font-size:15.5px;">Pāṇini's phoneme-inventory (the Śivasūtras) is traditionally held to have been revealed to him by Śiva's damaru at the conclusion of the cosmic dance — each of the fourteen sounds of the drum corresponding to one Śivasūtra. This is the tradition's way of saying that the formal structure underlying language is not a human invention but a revelation of the structure of sound itself. The reciter who memorises Pāṇini's system internalises, in technical form, precisely what the Śākta Tantra encodes in the mātṛkā-nyāsa: the complete phonological map of reality. Grammar and Tantra arrive at the same map by different roads.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-summary1')">← सारः</span>
+    <span class="fn-btn" onclick="showSection('s-sphotavada')">Next: स्फोटवादः →</span>
+  </div>
+</section>
+
+
+<!-- ═══ S11 SPHOṬAVĀDA ═══ -->
+<section class="section hidden" id="s-sphotavada">
+  <div class="eyebrow">अध्यायः ९ · Philosophy of the Word-Unit</div>
+  <h2 class="title">
+    <span class="dn">स्फोटवादः</span>
+    The Sphoṭa Doctrine — What a Word Really Is
+  </h2>
+  <p class="lede">The most philosophically consequential question generated by the Vyākaraṇa-śāstra is not about any grammatical rule but about the nature of the word itself: is a word the sequence of its phonemes, or is it something indivisible that the phonemes merely reveal? This is the question of sphoṭa — and it drives a debate that connects Pāṇini to Bhartṛhari to Śaṅkara to modern linguistic theory.</p>
+
+  <div class="panel">
+    <h3>The Problem That Generated the Doctrine</h3>
+    <p>When you hear the word <span class="dn">गौः</span> (gauḥ, "cow"), you hear four sounds in sequence: G · A · U ·ḥ. But the meaning — your understanding of "cow" — arises not from any one of those sounds, and not from the accumulated sequence, but in a single flash of comprehension that follows the sequence. The last sound triggers the meaning, but the meaning is not the last sound. So what exactly is the bearer of meaning?</p>
+    <p>The grammarian Sphoṭavādin's answer: the bearer of meaning is the <span class="iast">sphoṭa</span> — the indivisible word-unit that the phoneme-sequence <em>reveals</em> but does not constitute. The phonemes (dhvanis) are the acoustic events you hear; the sphoṭa is the word-identity that persists unchanged whether spoken by a man or a woman, loudly or softly, by a Northerner or a Southerner. The dhvanis are the revealing medium; the sphoṭa is the permanent, revealed referent. This distinction maps directly onto Advaita's distinction between the conditioned appearance (vyāvahārika) and the unconditioned reality (pāramārthika).</p>
+    <div class="sanskrit-block">
+      स्फोटः शब्दो ध्वनिस्तस्य व्यञ्जकः परिकीर्त्यते ।<br>
+      अनादिनिधनः नित्यः वाचकः सर्वशब्दिनाम् ॥
+      <span style="font-size:16px;color:var(--gold);">Bhartṛhari, Vākyapadīya 1.44 — "The sphoṭa is the Word; dhvani is its revealer. The eternal, without beginning or end, is the denoter of all speakers."</span>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>Śaṅkara's Metaphor: The Lamp and the Jar</h3>
+      <p>Śaṅkara uses the lamp-and-jar metaphor (<span class="iast">dīpa-ghaṭa-nyāya</span>) repeatedly in his Upaniṣad bhāṣyas to illustrate how the Ātman, though unchanging and identical in all beings, appears differentiated through the conditioning medium (upādhi) of each body-mind complex. The lamp's light is one; the shape of the jar merely limits and appears to colour the light within it. Remove the jar, and the light is seen to have always been the universal room-light, undivided.</p>
+      <p>Applied to sphoṭa: the sphoṭa is the single eternal light of language-reality (<span class="iast">Śabda-Brahman</span>); each phoneme-sequence (dhvani) is a temporarily limiting medium — a differently shaped jar — that appears to produce different "words" but is in every case revealing the same undivided linguistic reality. The diversity of languages, dialects, and pronunciations is the diversity of jars; the sphoṭa that shines through them is one. This is exactly Bhartṛhari's position in the Vākyapadīya, and Śaṅkara's Advaita reading of it in his commentary on Brahmasūtra 1.3.28 is the clearest fusion of grammatical and Vedāntic reasoning in the tradition.</p>
+    </div>
+    <div class="panel">
+      <h3>The Anti-Sphoṭa Position — Mīmāṃsā and Nyāya</h3>
+      <p>The Mīmāṃsakas and Naiyāyikas reject the sphoṭa on empirical grounds: we hear phonemes, they argue; there is no additional "sphoṭa-entity" that we perceive. Meaning arises from the last phoneme triggering memory of the earlier ones (Mīmāṃsā's saṁskāra theory) or from the inherent relation (sambandha) between phoneme-type and meaning (Nyāya's position). The sphoṭavādin's indivisible word-unit is an unnecessary theoretical entity — a violation of parsimony (lāghava).</p>
+      <p>What makes this debate historically productive is that both sides are compelled to develop increasingly precise theories of perception, memory, time, and signification in order to sustain their positions. The sphoṭa debate is the crucible in which Indian philosophy of language becomes genuinely technical. The stakes are not merely grammatical: if the sphoṭa exists and is eternal, then the Vedic mantra has the same sphoṭa-reality across all its performances — the phoneme-sequence can vary with reciter, but the meaning-bearing sphoṭa is timelessly the same. If the anti-sphoṭa view is correct, the Mīmāṃsakas must work much harder to explain why the Vedic mantra is eternally efficacious.</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Practical Consequence: What Sphoṭavāda Means for Mantra Sādhanā</h3>
+    <p>The sphoṭa doctrine has a direct and underappreciated bearing on mantra practice. If the sphoṭa is the real bearer of a mantra's power, then the exact phonetic form of the mantra — which dhvani-sequence reveals the sphoṭa — matters absolutely. A mantra mispronounced is not an approximate version of the mantra; it is a different dhvani-sequence revealing, at best, a different or distorted sphoṭa. This is why the Prātiśākhya tradition's insistence on exact phonetic preservation is not pedantry but metaphysics: the tradition understood, at the level of formal grammar, that the difference between <span class="dn">ह्रीम्</span> (hrīṁ) with the correct nasalisation and the same syllable with a slightly nasalised vowel is not a difference of degree but of kind — a different dhvani-revealing a different or no sphoṭa. The Śākta Tantra's insistence that bīja-mantras must be received from a guru and not read from a text is the practical instantiation of precisely this philosophical commitment.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-panini-deep')">← पाणिनि-गाम्भीर्यम्</span>
+    <span class="fn-btn" onclick="showSection('s-mimamsa')">Next: मीमांसा →</span>
+  </div>
+</section>
+
+
+<!-- ═══ S12 PŪRVA-MĪMĀṂSĀ ═══ -->
+<section class="section hidden" id="s-mimamsa">
+  <div class="eyebrow">अध्यायः १० · The Śāstra of Śāstras</div>
+  <h2 class="title">
+    <span class="dn">मीमांसाशास्त्रम्</span>
+    Pūrva-Mīmāṃsā — The Science of Scriptural Interpretation
+  </h2>
+  <p class="lede">Pūrva-Mīmāṃsā is, uniquely, a śāstra whose subject matter is the correct interpretation of other śāstras — specifically, the Vedic injunctions. It is the tradition's formal theory of textual authority, and its twelve foundational principles of exegesis (the Jaimini-sūtra hermeneutics) were adopted, debated, and refined by every subsequent śāstric tradition, including Vedānta, Dharmaśāstra, and Tantra.</p>
+
+  <div class="panel">
+    <h3>Jaimini and the Mīmāṃsā-Sūtra (~300–200 BCE)</h3>
+    <p>Jaimini's Mīmāṃsā-Sūtra (also called Pūrva-Mīmāṃsā-Sūtra) is one of the longest sūtra collections in the tradition — approximately 2,745 sūtras in twelve adhyāyas. Its central question is deceptively simple: <em>how do we know what a Vedic injunction requires?</em> The question is not simple because the Vedic corpus contains thousands of injunctions, many of which appear to conflict, many of whose terms are ambiguous, and many of whose original ritual contexts are no longer recoverable. Jaimini's twelve-adhyāya investigation produces a complete hermeneutic science — a formal theory of how language in a scriptural context creates obligation.</p>
+    <table class="chron">
+      <tr><th>Mīmāṃsā Principle</th><th>Sanskrit Term</th><th>Meaning and Application</th></tr>
+      <tr><td class="shastra">Direct statement</td><td><span class="dn">श्रुति</span></td><td>What the text explicitly says; the primary means of knowing Vedic injunctions; highest authority in the absence of conflict</td></tr>
+      <tr><td class="shastra">Implied meaning</td><td><span class="dn">लिङ्ग</span></td><td>What is implied by the context of a passage; used when direct statement alone is insufficient for determining the full scope of an injunction</td></tr>
+      <tr><td class="shastra">Syntactic unity</td><td><span class="dn">वाक्य</span></td><td>Parts of a sentence that belong together must be interpreted together; prevents arbitrary splitting of injunctions</td></tr>
+      <tr><td class="shastra">Contextual coherence</td><td><span class="dn">प्रकरण</span></td><td>An injunction must be read in its ritual-context; the topic (prakaraṇa) of a section determines ambiguous references within it</td></tr>
+      <tr><td class="shastra">Position in text</td><td><span class="dn">स्थान</span></td><td>Where a statement appears in the text bears on its scope; injunctions in a general position apply generally; those in a specific ritual section apply specifically</td></tr>
+      <tr><td class="shastra">Name / designation</td><td><span class="dn">समाख्या</span></td><td>The traditional name given to a rite or text encodes information about its nature and scope; names are authoritative guides to interpretation</td></tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>Śaṅkara's Mirror: Mīmāṃsā as the Foil for Advaita</h3>
+      <p>Śaṅkara's relationship to Pūrva-Mīmāṃsā is the most productively tense intellectual relationship in all of Sanskrit philosophy. He accepts the entire Mīmāṃsā hermeneutic apparatus — the six means of knowing an injunction's scope, the principle that śruti is self-validating (<span class="iast">svataḥ prāmāṇya</span>), the axiom that the Veda's language is eternal and not merely conventional — and then uses these same tools to argue for a conclusion the Mīmāṃsakas reject: that the <em>primary</em> meaning of the Veda is the knowledge of Brahman, not the performance of ritual.</p>
+      <p>Śaṅkara's metaphor for this move is the <span class="iast">nyāya</span> of the serpent and the rope (<span class="iast">rajju-sarpa-nyāya</span>): the Mīmāṃsaka, like a person who sees a rope in dim light and mistakes it for a serpent, performs elaborate rituals in response to a text that, correctly illuminated by the Upaniṣadic teaching, reveals only Brahman. The error is not in the text; it is in the level of illumination brought to it. Mīmāṃsā's exegetical tools are correct and valuable; they are simply applied to the wrong question — the question of ritual efficacy rather than the question of the nature of the Self.</p>
+    </div>
+    <div class="panel">
+      <h3>What Mīmāṃsā Got Right — And Why Every Śāstrakāra Owes It a Debt</h3>
+      <p>Whatever one thinks of the Mīmāṃsā's ultimate philosophical conclusions, its contribution to the methodology of all subsequent Sanskrit scholarship is incalculable. The six exegetical principles above were adopted wholesale by:</p>
+      <ul style="padding-left:18px;font-size:15px;line-height:2;">
+        <li>Vedānta — all five major bhāṣyakāras use Mīmāṃsā hermeneutics to interpret Upaniṣadic passages</li>
+        <li>Dharmaśāstra — Medhātithi, Vijñāneśvara, and all commentators on Manusmṛti use prakaraṇa and vākya principles to resolve conflicting smṛti passages</li>
+        <li>Āgamic Tantra — the Śrīvidyā tradition explicitly adopts Mīmāṃsā svataḥ-prāmāṇya (self-validating authority) for the āgamas in parallel with Vedic śruti</li>
+        <li>Even Nyāya and Vaiśeṣika use the Mīmāṃsā framework as the benchmark from which their own epistemological departures are measured</li>
+      </ul>
+      <p style="font-size:14.5px;">Pūrva-Mīmāṃsā is, in this sense, the śāstra that taught all other śāstras how to read themselves.</p>
+    </div>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-sphotavada')">← स्फोटवादः</span>
+    <span class="fn-btn" onclick="showSection('s-nyaya')">Next: न्यायः →</span>
+  </div>
+</section>
+
+
+<!-- ═══ S13 NYĀYA-VAIŚEṢIKA ═══ -->
+<section class="section hidden" id="s-nyaya">
+  <div class="eyebrow">अध्यायः ११ · Logic and Ontology</div>
+  <h2 class="title">
+    <span class="dn">न्याय-वैशेषिकम्</span>
+    Nyāya &amp; Vaiśeṣika — The Śāstras of Reason and Category
+  </h2>
+  <p class="lede">While grammar was mapping the structure of language and Mīmāṃsā was mapping the structure of textual authority, two further śāstric traditions were constructing the structure of reason itself: Nyāya (the science of correct inference) and Vaiśeṣika (the science of real categories of being). Together they constitute the epistemological and ontological infrastructure upon which every other śāstra draws, explicitly or not.</p>
+
+  <div class="panel">
+    <h3>The Nyāya-Sūtra of Gautama (~200 BCE – 200 CE)</h3>
+    <p>Gautama's Nyāya-Sūtra (528 sūtras) defines and defends the four means of valid knowledge (<span class="iast">pramāṇas</span>) that Indian philosophy would debate for the next two millennia: direct perception (<span class="iast">pratyakṣa</span>), inference (<span class="iast">anumāna</span>), comparison (<span class="iast">upamāna</span>), and verbal testimony (<span class="iast">śabda</span>). The inclusion of śabda as a pramāṇa — and the analysis of exactly what conditions must be met for verbal testimony to count as valid knowledge — is the Nyāya tradition's point of connection with both grammar (Pāṇini) and exegetics (Mīmāṃsā).</p>
+    <div class="grid2">
+      <div>
+        <h4>The Five-Membered Inference (Pañcāvayava)</h4>
+        <p style="font-size:15px;">Nyāya's formalisation of inference — the five-membered syllogism — is the most practically influential śāstric contribution to Indian intellectual life. Every Sanskrit philosophical commentary, every debate in a royal court, every argument in a dharmaśāstra tribunal, was conducted in this form:</p>
+        <ol style="padding-left:18px;font-size:15px;line-height:2;color:var(--text-dim);">
+          <li><strong style="color:var(--cream);">Pratijñā</strong> — the thesis: "The mountain has fire"</li>
+          <li><strong style="color:var(--cream);">Hetu</strong> — the reason: "Because it has smoke"</li>
+          <li><strong style="color:var(--cream);">Udāharaṇa</strong> — the example: "Wherever there is smoke, there is fire, as in a kitchen"</li>
+          <li><strong style="color:var(--cream);">Upanaya</strong> — the application: "This mountain has smoke (of the kind co-present with fire)"</li>
+          <li><strong style="color:var(--cream);">Nigamana</strong> — the conclusion: "Therefore the mountain has fire"</li>
+        </ol>
+      </div>
+      <div>
+        <h4>Vaiśeṣika's Seven Categories of Being</h4>
+        <p style="font-size:15px;">Kaṇāda's Vaiśeṣika-Sūtra (~200 BCE) classifies all of existing reality into seven irreducible ontological categories (<span class="iast">padārthas</span>):</p>
+        <table class="chron" style="margin-top:8px;">
+          <tr><th>Padārtha</th><th>Translation</th></tr>
+          <tr><td class="shastra">Dravya</td><td>Substance (9 kinds: earth, water, fire, air, ether, time, space, self, mind)</td></tr>
+          <tr><td class="shastra">Guṇa</td><td>Quality (24 kinds: colour, taste, smell, touch, number, dimension, etc.)</td></tr>
+          <tr><td class="shastra">Karma</td><td>Action / Motion (5 kinds)</td></tr>
+          <tr><td class="shastra">Sāmānya</td><td>Universal / Genus</td></tr>
+          <tr><td class="shastra">Viśeṣa</td><td>Particular / Individuator</td></tr>
+          <tr><td class="shastra">Samavāya</td><td>Inherence (the relation between substance and its qualities)</td></tr>
+          <tr><td class="shastra">Abhāva</td><td>Absence / Non-existence (added later)</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Śaṅkara's Metaphor: The Pot-Space and the Cosmic Space</h3>
+    <p>Śaṅkara's most recurrent metaphor for the relationship between individual consciousness (jīva) and universal consciousness (Brahman) is the <span class="iast">ghaṭākāśa-mahākāśa-nyāya</span> — the metaphor of the pot-space and the great-space. The space enclosed inside a clay pot appears to be separate, limited, and different from the open sky outside; but when the pot is broken, there is no merger of two spaces — there was only ever one space, the pot merely appeared to limit and individualise a portion of it. Śaṅkara deploys this against the Vaiśeṣika's category of Viśeṣa (particulars): the Vaiśeṣika insists that what makes individual substances ultimately different from each other are irreducible "particularisers" — atomic distinguishing features at the most fundamental level. For Śaṅkara, this is exactly the pot-space error: the apparent individuation of consciousness into distinct jīvas is the superimposition of the pot's shape onto the undivided space; remove the pot of avidyā (ignorance), and the Viśeṣa dissolves into the sameness of Brahman.</p>
+    <p>This is not merely a refutation of Vaiśeṣika; it is a demonstration of how Advaita Vedānta uses every opposing śāstra's most precise formulations as the material for its own argument. Śaṅkara never ignores the Naiyāyika or the Vaiśeṣika; he inhabits their vocabulary completely in order to show, from within it, where their analysis stops short.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-mimamsa')">← मीमांसा</span>
+    <span class="fn-btn" onclick="showSection('s-shankarameta')">Next: शाङ्करभाष्यम् →</span>
+  </div>
+</section>
+
+
+<!-- ═══ S14 ŚAṄKARA'S META-ŚĀSTRA ═══ -->
+<section class="section hidden" id="s-shankarameta">
+  <div class="eyebrow">अध्यायः १२ · The Bhāṣya as Śāstra</div>
+  <h2 class="title">
+    <span class="dn">शाङ्करभाष्यम्</span>
+    Śaṅkara's Commentaries as a Meta-Śāstric Achievement
+  </h2>
+  <p class="lede">Śaṅkarācārya (~788–820 CE, traditional dates) did not compose an independent śāstra of his own. He composed <em>bhāṣyas</em> — commentaries on existing śāstras. Yet this apparently secondary activity constitutes the most comprehensive and architecturally coherent restatement of the entire śāstric tradition ever achieved, and it serves as the pivot around which the medieval śāstric synthesis turns.</p>
+
+  <div class="panel">
+    <h3>The Prasthānatrayī — The Triple Foundation</h3>
+    <p>Śaṅkara established the canon of Vedānta by choosing three foundational texts — the <span class="iast">prasthānatrayī</span>, "three points of departure" — and writing a bhāṣya on each. This choice was itself a śāstric act: by selecting these three, Śaṅkara implicitly ranked the entire available corpus and defined what counted as foundational for the Advaita tradition:</p>
+    <table class="chron">
+      <tr><th>Text</th><th>Type</th><th>Śaṅkara's Bhāṣya Title</th><th>Śāstric Status Claimed</th></tr>
+      <tr>
+        <td class="shastra">Principal Upaniṣads (10–13)</td>
+        <td>Śruti</td>
+        <td>Individual bhāṣyas on each: Bṛhadāraṇyaka, Chāndogya, Taittirīya, Aitareya, Māṇḍūkya (with Gauḍapāda-kārikā), Kaṭha, Praśna, Muṇḍaka, Kena, Īśā</td>
+        <td class="era">Absolute (apauruṣeya)</td>
+      </tr>
+      <tr>
+        <td class="shastra">Brahmasūtra of Bādarāyaṇa</td>
+        <td>Smṛti / Śāstra</td>
+        <td>Brahmasūtra-Bhāṣya (Śārīrakamīmāṃsābhāṣya)</td>
+        <td class="era">Systematic: the logical structure of Vedānta</td>
+      </tr>
+      <tr>
+        <td class="shastra">Bhagavad-Gītā</td>
+        <td>Smṛti (Itihāsa section)</td>
+        <td>Gītā-Bhāṣya</td>
+        <td class="era">Practical: Vedānta applied to the question of action</td>
+      </tr>
+    </table>
+    <p>The three texts together form a complete epistemological sequence: the Upaniṣads are the direct testimony (śabda-pramāṇa); the Brahmasūtra is the logical systematisation (anumāna) that shows their teachings are internally consistent; the Gītā is the practical application (prayoga) showing how the knowledge is to be lived. This triple structure mirrors the śāstric ideal of a complete discipline: source, system, practice.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>Śaṅkara's Four Defining Metaphors — A Systematic Survey</h3>
+      <p>Śaṅkara's genius is not merely philosophical; it is rhetorical. He uses a small set of carefully chosen metaphors that recur throughout his bhāṣyas, each metaphor targeting a specific philosophical error. Together they constitute a complete pedagogical system for removing the layers of avidyā:</p>
+      <div class="timeline">
+        <div class="tl-item milestone">
+          <div class="tl-date">Adhyāsa — Superimposition</div>
+          <div class="tl-title">The Snake on the Rope <span class="dn">(रज्जु-सर्प-न्याय)</span></div>
+          <div class="tl-body">Targets <em>avidyā at its root</em>: the false attribution of the properties of one thing (the snake's danger, the rope's harmlessness) to another because of insufficient light/knowledge. Śaṅkara opens the Brahmasūtra-Bhāṣya's Adhyāsa-bhāṣya with this metaphor as the diagnosis of the entire human predicament: we see Ātman-Brahman but superimpose the properties of the body-mind complex onto it. Remove the superimposition (through correct knowledge), and no snake was ever there — the rope was always only a rope.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Māyā — Cosmic Appearance</div>
+          <div class="tl-title">The Magician's Display <span class="dn">(ऐन्द्रजाल-न्याय)</span></div>
+          <div class="tl-body">Targets <em>the apparent reality of the world</em>: a skilled magician creates an apparent elephant that is real enough to stampede the audience but has no elephant-nature. The world-appearance (jagat) is the display; Brahman is the magician. The audience's error is not perceiving the display — the display is real as appearance — but taking the displayed elephant to have independent elephant-substance. Māyā does not mean the world is not there; it means the world does not have the independent substantiality it appears to have.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Jīva-Brahman Identity</div>
+          <div class="tl-title">The Pot-Space and Cosmic Space <span class="dn">(घटाकाश-महाकाश-न्याय)</span></div>
+          <div class="tl-body">Targets <em>the apparent multiplicity of selves</em>: space appears limited when enclosed in a pot but is the same space before the pot was made and after it is broken. The jīva's apparent individuality is the pot's contribution, not the space's. Liberation is not the merging of two spaces but the recognition that there was never anything other than the one space — the pot of avidyā was the only apparent division.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Turīya — The Fourth State</div>
+          <div class="tl-title">The Thread and the Beads <span class="dn">(सूत्र-मणि-न्याय)</span></div>
+          <div class="tl-body">Targets <em>the relationship of Brahman to the three states of consciousness</em> (waking, dream, deep sleep): the sūtrātman-Brahman is the thread that holds together all three states as beads on a string. The states come and go; the thread remains. Liberation is recognising oneself as the thread, not as any bead — as Turīya, the witnessing fourth, which is not a fourth state but the ever-present ground in which the three states appear and disappear.</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>The Bhāṣya as Śāstric Form</h3>
+      <p>A <span class="iast">bhāṣya</span> is not a paraphrase or a simplification; it is a formal śāstric genre with its own conventions, and Śaṅkara's bhāṣyas are the genre's definitive exemplars. Each bhāṣya proceeds through a fixed structure for each sūtra or passage:</p>
+      <ol style="padding-left:18px;font-size:15px;line-height:2;">
+        <li><strong style="color:var(--gold-bright);">Pūrvapakṣa</strong> — the opposing view, stated with full force and the best available arguments; Śaṅkara never attacks a strawman</li>
+        <li><strong style="color:var(--gold-bright);">Uttarapakṣa / Siddhānta</strong> — the established conclusion, with reasons, cross-references to Upaniṣadic passages, and often a metaphor</li>
+        <li><strong style="color:var(--gold-bright);">Dūṣaṇa</strong> — the refutation of the pūrvapakṣa point by point, leaving no unaddressed objection</li>
+        <li><strong style="color:var(--gold-bright);">Saṁgati</strong> — the connection of the current sūtra to the preceding and following ones, maintaining the thread of the overall argument</li>
+      </ol>
+      <p style="font-size:14.5px;">This four-part structure was adopted wholesale by every subsequent Vedāntic bhāṣyakāra — Rāmānuja, Madhva, Nimbārka, Vallabha — even when they completely disagreed with Śaṅkara's conclusions. The form outlasted the content: Śaṅkara made the bhāṣya the primary vehicle of Vedāntic thought so completely that no serious challenge to his conclusions could be mounted except in the same formal genre and through the same formal procedure. He won not only the argument but the format of all future arguments.</p>
+
+      <h3 style="margin-top:20px;">The Vivartavāda — Apparent Transformation</h3>
+      <p>Śaṅkara's most technical philosophical contribution — the one that distinguishes Advaita from Bhedābheda and from Sāṃkhya's pariṇāmavāda (real transformation) — is the doctrine of <span class="iast">vivarta</span>: the world is not a real transformation (pariṇāma) of Brahman but an <em>apparent</em> transformation. The classic illustration is the wave and the ocean: a Sāṃkhya-style pariṇāmavādin says the wave is a real transformation of ocean-water, a different form that the water has genuinely become. The Advaitin says the wave is not a different form — it is the ocean appearing in a certain way from a certain perspective. There is no moment at which ocean-water becomes wave-water; there is only ocean, appearing wave-like from the position of someone on the shore. This distinction — vivarta versus pariṇāma — is Śaṅkara's decisive technical move against every form of theistic transformation-cosmology.</p>
+    </div>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-nyaya')">← न्यायः</span>
+    <span class="fn-btn" onclick="showSection('s-vakyapadiya')">Next: वाक्यपदीयम् →</span>
+  </div>
+</section>
+
+
+<!-- ═══ S15 VĀKYAPADĪYA ═══ -->
+<section class="section hidden" id="s-vakyapadiya">
+  <div class="eyebrow">अध्यायः १३ · Language as Brahman</div>
+  <h2 class="title">
+    <span class="dn">वाक्यपदीयम्</span>
+    Bhartṛhari's Vākyapadīya — The Śāstra That Made Language Itself Divine
+  </h2>
+  <p class="lede">Bhartṛhari's Vākyapadīya (~5th century CE) is the single text in the Sanskrit tradition that most completely unifies the grammatical and the metaphysical: it is simultaneously a treatise on the philosophy of language, a grammatical theory, and a complete non-dual metaphysics in which language — specifically the sentence-meaning that arises in a single flash of comprehension — is identified with Brahman itself.</p>
+
+  <div class="panel">
+    <h3>The Three Kāṇḍas and Their Argument</h3>
+    <table class="chron">
+      <tr><th>Kāṇḍa</th><th>Topic</th><th>Central Claim</th><th>Philosophical Contribution</th></tr>
+      <tr>
+        <td class="shastra">I. Brahmakāṇḍa</td>
+        <td>The nature of the word (śabda) and its relationship to Brahman</td>
+        <td>Śabda-Brahman: language is not a human tool but the self-expression of Brahman; the Veda is the self-articulation of the Absolute</td>
+        <td class="note">Establishes the philosophical foundation: reality is inherently linguistic; the diversity of the manifest world is Brahman's self-differentiation through language</td>
+      </tr>
+      <tr>
+        <td class="shastra">II. Vākyakāṇḍa</td>
+        <td>The sentence (vākya) and the phenomenon of meaning-flash (pratibhā)</td>
+        <td>Meaning arises not from the addition of word-meanings but in a single indivisible flash of understanding (pratibhā) when the sentence is complete — this flash is the sphoṭa at the sentence level</td>
+        <td class="note">The theory of pratibhā as the flash of insight that carries meaning — directly paralleled in Śaṅkara's account of brahma-jñāna arising as a single, indivisible recognition</td>
+      </tr>
+      <tr>
+        <td class="shastra">III. Padakāṇḍa (Prakīrṇakāṇḍa)</td>
+        <td>Individual word-types (nouns, verbs, particles, etc.) and their grammatical and philosophical analysis</td>
+        <td>A comprehensive philosophical grammar treating each word-class as a distinct mode of Brahman's self-differentiation</td>
+        <td class="note">The most technically grammatical section; shows how the philosophical claims of Kāṇḍas I and II are grounded in and consistent with Pāṇinian linguistic analysis</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>Pratibhā — The Flash and Śaṅkara's Mahāvākya</h3>
+      <p>Bhartṛhari's key concept in the Vākyakāṇḍa is <span class="iast">pratibhā</span> — the instantaneous flash of comprehension that arises when a sentence is heard in its entirety. This is not inference or recollection; it is a direct, non-sequential illumination. The word-sounds are heard in time; the meaning appears outside time, as a unity.</p>
+      <p>Śaṅkara's account of how the mahāvākya "<span class="dn">तत् त्वम् असि</span>" (tat tvam asi — "That thou art") liberates the hearer follows exactly this structure. The sentence is heard as a sequence of three words; the recognition of identity between the "Thou" (the individual Self) and "That" (Brahman) arises not by adding up three meanings but in a single, indivisible flash — the pratibhā of non-dual recognition. Liberation is the pratibhā of the mahāvākya at the level of the Self. Grammar and Vedānta share the same phenomenological account of their most important moments.</p>
+    </div>
+    <div class="panel">
+      <h3>Śabda-Brahman — The Identification That Changes Everything</h3>
+      <p>Bhartṛhari's opening verses of the Brahmakāṇḍa state what no grammarian before him had dared state so baldly:</p>
+      <div class="sanskrit-block" style="font-size:18px;margin:10px 0 14px;">
+        अनादिनिधनं ब्रह्म शब्दतत्त्वं यदक्षरम् ।<br>
+        विवर्ततेऽर्थभावेन प्रक्रिया जगतो यतः ॥
+      </div>
+      <p class="gloss" style="margin-bottom:12px;">"Brahman, beginningless and endless, whose nature is the word-principle (śabda-tattva), which is imperishable — from it the process of the world appears through the appearance of meanings." (Vākyapadīya 1.1)</p>
+      <p style="font-size:15px;">This is the most compressed statement of the entire śabda-brahman theology: Brahman is not merely correlated with language or expressible in language; Brahman <em>is</em> the linguistic principle, and the manifest world is Brahman's self-differentiation into meaning-forms. The diversity of phenomena is the diversity of meanings that a single, undivided Śabda-Brahman expresses. This is, in metaphysical terms, exactly what the mātṛkā doctrine expresses in phonological terms: the 51 (or 52) phonemes are not sounds alongside Brahman; they are the self-articulation of Brahman as the sound-matrix of all phenomena.</p>
+    </div>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-shankarameta')">← शाङ्करभाष्यम्</span>
+    <span class="fn-btn" onclick="showSection('s-practical')">Next: प्रयोगः →</span>
+  </div>
+</section>
+
+
+<!-- ═══ S16 PRACTICAL TRANSMISSION ═══ -->
+<section class="section hidden" id="s-practical">
+  <div class="eyebrow">अध्यायः १४ · How Śāstra Is Transmitted</div>
+  <h2 class="title">
+    <span class="dn">प्रयोगः — शास्त्रसंक्रमणम्</span>
+    Practical Transmission — How a Śāstra Actually Passes From Teacher to Student
+  </h2>
+  <p class="lede">Understanding that a śāstra is a systematic discipline is one thing; understanding how it actually travels across generations — how it gets from the first author to the student sitting in a classroom or a forest hermitage fifteen centuries later — requires a detailed account of the transmission mechanisms the tradition itself developed. These mechanisms are not merely historical curiosities; they are living practices, and several are directly relevant to understanding why śāstric knowledge has the specific character it does.</p>
+
+  <div class="panel">
+    <h3>The Five Modes of Śāstric Transmission</h3>
+    <table class="chron">
+      <tr><th>Mode</th><th>Sanskrit Term</th><th>Character</th><th>Primary Śāstras Using This Mode</th></tr>
+      <tr>
+        <td class="shastra">Memorised oral text</td>
+        <td><span class="dn">पाठ / कण्ठस्थ</span></td>
+        <td>The sūtra-text (or verse-text) memorised without written support; the gold standard for Vedic recitation and for Pāṇini's grammar</td>
+        <td class="note">Vedāṅgas, Pāṇini's Aṣṭādhyāyī, Kalpa Sūtras, all early śāstra literature before writing was institutionalised</td>
+      </tr>
+      <tr>
+        <td class="shastra">Oral commentary tradition</td>
+        <td><span class="dn">वृत्ति / भाष्य</span></td>
+        <td>The memorised text requires an oral explanation to be intelligible; the commentary (vṛtti, bhāṣya, ṭīkā) is the expansion that unlocks the compressed sūtra</td>
+        <td class="note">All sūtra traditions; the vṛtti-bhāṣya-ṭīkā chain is the structural backbone of every classical śāstra transmission</td>
+      </tr>
+      <tr>
+        <td class="shastra">Practical demonstration</td>
+        <td><span class="dn">प्रयोग / अनुष्ठान</span></td>
+        <td>Ritual śāstras (Kalpa Sūtras, Āgamas) require physical demonstration — the words alone do not transmit the knowledge; the gesture, the fire-arrangement, the relative positions must be shown in action</td>
+        <td class="note">Śrauta and Gṛhya Sūtras, all Āgamic traditions, Nāṭyaśāstra (where theory of rasa requires demonstrated abhinaya)</td>
+      </tr>
+      <tr>
+        <td class="shastra">Initiatory transmission</td>
+        <td><span class="dn">दीक्षा / संस्कार</span></td>
+        <td>Certain śāstras hold that some content cannot be transmitted without a prior transformation of the student's consciousness; initiation (dīkṣā) is the formal enactment of this transformation</td>
+        <td class="note">Āgamic Tantra; Śrīvidyā tradition; Nāda-yoga traditions; the Vedic upanayana is a structurally parallel but less esoteric initiation for Vedāṅga study</td>
+      </tr>
+      <tr>
+        <td class="shastra">Written text with commentary</td>
+        <td><span class="dn">ग्रन्थ / टीका</span></td>
+        <td>The full textual tradition — base text plus multiple layers of commentary, each later commentary commenting on both the base text and earlier commentaries</td>
+        <td class="note">Dharmaśāstra, Vedānta, Nyāya-Vaiśeṣika, Mīmāṃsā; becomes the dominant mode from approximately 5th century CE onward</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>The Guru-Paramparā — Why the Chain Matters</h3>
+      <p>Every śāstric tradition maintains a <span class="iast">guru-paramparā</span> — a listed lineage of teachers stretching from the present back to the founding teacher or to a divine source. This list is not merely genealogical decoration; it performs three essential functions:</p>
+      <ol style="padding-left:18px;font-size:15px;line-height:2;">
+        <li><strong style="color:var(--gold-bright);">Authenticity marker</strong> — a śāstric claim is authoritative only if it can be traced back through an unbroken lineage to a recognised source. A rupture in the paramparā weakens the claim regardless of its philosophical merits.</li>
+        <li><strong style="color:var(--gold-bright);">Quality control</strong> — the guru-śiṣya relationship requires the guru to certify that the student has genuinely understood and embodied the teaching before transmitting it further. The paramparā is the tradition's mechanism for ensuring that compressed sūtra-knowledge is consistently unpacked correctly across generations.</li>
+        <li><strong style="color:var(--gold-bright);">Interpretive authority</strong> — when two interpretations of a sūtra conflict, the interpretation that can claim a longer or more prestigious paramparā has, ceteris paribus, greater authority. Lineage is not merely biographical; it is epistemological.</li>
+      </ol>
+      <p style="font-size:14.5px;">Śaṅkara's establishment of four maṭhas (monastic centres) at Śṛṅgerī, Dvārakā, Badarī, and Purī was precisely an institutional response to this need: he created four centres that would maintain the Advaita paramparā in four geographic regions simultaneously, ensuring that the tradition could survive localised disruption without a complete break.</p>
+    </div>
+    <div class="panel">
+      <h3>Śaṅkara's Metaphor: The Lamp-Lighting-Lamp</h3>
+      <p>Śaṅkara uses the image of one lamp lighting another (<span class="iast">pradīpa-pradīpayati-nyāya</span>) in his commentary on the Gauḍapāda-kārikā (Māṇḍūkya-kārikā-bhāṣya) to describe the transmission of liberating knowledge through the guru-paramparā. The metaphor is precise in what it denies as much as in what it asserts:</p>
+      <ul style="padding-left:18px;font-size:15px;line-height:2;">
+        <li>The lit lamp does not <em>give</em> its fire to the new lamp — the fire of the new lamp is not transferred fire but newly arisen fire</li>
+        <li>The lit lamp is the <em>necessary condition</em> (kāraṇa) for the new flame, not the flame's material cause</li>
+        <li>Both flames, once burning, are equally fire — the later flame has no lesser fire-nature than the earlier one</li>
+        <li>And when the teaching has been transmitted and the student has attained knowledge, the teacher's role is complete — the student does not remain dependent on the teacher's continued presence</li>
+      </ul>
+      <p style="font-size:14.5px;">This metaphor captures the Advaitic account of śāstric transmission at its most philosophically precise: the guru transmits not a substance but an occasion; the knowledge (brahma-jñāna) that arises in the student arises as the student's own recognition, not as something poured in from outside. The śāstra is the lamp; the student's understanding is the new flame; the guru is the contact that creates the occasion for ignition.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="cl-head">The Unanswered Question This Chapter Addresses</div>
+    <p style="font-size:15.5px;">Parts I through the earlier chapters established <em>what</em> śāstras are and <em>when</em> they appeared. This chapter answers the question those chapters left implicit: <em>how does a śāstra remain a living discipline rather than a dead text?</em> The answer is: through the five transmission modes operating simultaneously, with the guru-paramparā as the institutional form that keeps all five modes coherent. A śāstra whose paramparā is broken does not simply become "older" — it becomes a text requiring reconstruction rather than a living teaching capable of generating practitioners. The difference between reading Pāṇini's grammar and being trained by a Pāṇinian grammarian is exactly the difference between having access to a lamp and having your lamp lit.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-vakyapadiya')">← वाक्यपदीयम्</span>
+    <span class="fn-btn" onclick="showSection('s-living-shastra')">Next: जीवच्छास्त्रम् →</span>
+  </div>
+</section>
+
+
+<!-- ═══ S17 THE LIVING ŚĀSTRA TODAY ═══ -->
+<section class="section hidden" id="s-living-shastra">
+  <div class="eyebrow">अध्यायः १५ · Continuity Into the Present</div>
+  <h2 class="title">
+    <span class="dn">जीवच्छास्त्रम्</span>
+    The Living Śāstra — What Continues, What Has Changed, What Was Lost
+  </h2>
+  <p class="lede">The history of the śāstras is not merely academic. In 2025, every tradition examined in Part I has a living continuation — some robust and growing, some reduced to a handful of practitioners, some surviving only in manuscript. This chapter asks the question the preceding chapters earn the right to ask: of the foundational śāstric architecture built between 2000 BCE and 800 CE, what actually lives today, in what form, and why does it matter?</p>
+
+  <div class="panel">
+    <h3>The Living Inventory — Status as of 2025</h3>
+    <table class="chron">
+      <tr><th>Śāstric Tradition</th><th>Current Status</th><th>Primary Centres</th><th>Key Challenge</th></tr>
+      <tr>
+        <td class="shastra">Vedic Recitation (all pāṭha styles)</td>
+        <td><span class="tag jade">Living</span></td>
+        <td>South India (Tamil Nadu, Andhra, Karnataka, Kerala) primarily; some centres in Maharashtra and Varanasi</td>
+        <td class="note">The most endangered stratum: ghana-pāṭha-trained recitors number in the hundreds globally; the oral transmission infrastructure is under severe demographic pressure</td>
+      </tr>
+      <tr>
+        <td class="shastra">Pāṇinian Grammar (Vyākaraṇa)</td>
+        <td><span class="tag jade">Living (academic)</span></td>
+        <td>Varanasi (Sampurnanand Sanskrit University), Pune (Bhandarkar Oriental Research Institute), Tirupati, traditional pāṭhaśālās across South India</td>
+        <td class="note">Full Aṣṭādhyāyī training (3–7 years) survives; computational linguistics has created new interest; the oral-commentary tradition is thinner than a generation ago</td>
+      </tr>
+      <tr>
+        <td class="shastra">Gṛhya Sūtra saṁskāras</td>
+        <td><span class="tag jade">Living (widely)</span></td>
+        <td>Across the Hindu diaspora globally; the most geographically distributed surviving śāstric practice</td>
+        <td class="note">Form preserved but contextual understanding severely reduced; most practitioners perform without knowledge of the Gṛhya Sūtra source-texts or the Vedāṅga rationale</td>
+      </tr>
+      <tr>
+        <td class="shastra">Śrauta ritual (major sacrifices)</td>
+        <td><span class="tag veda">Critically rare</span></td>
+        <td>Kerala (Nambudiri Brahmin community); a few centres in Andhra Pradesh</td>
+        <td class="note">The most complete surviving form of Vedic śrauta sacrifice; the 1975 Agnicayana ritual in Kerala, filmed by Robert Gardner and Frits Staal, remains the most documented recent performance</td>
+      </tr>
+      <tr>
+        <td class="shastra">Advaita Vedānta (Śaṅkara paramparā)</td>
+        <td><span class="tag jade">Living (institutional)</span></td>
+        <td>The four Śaṅkarācārya maṭhas; Ramakrishna Mission (a modernised Vedānta institution); independent scholars globally</td>
+        <td class="note">Institutional health varies by maṭha; the academic study of Śaṅkara's bhāṣyas is globally active; living transmission of the full commentatorial tradition is thinner</td>
+      </tr>
+      <tr>
+        <td class="shastra">Mīmāṃsā (Pūrva-Mīmāṃsā)</td>
+        <td><span class="tag veda">Endangered</span></td>
+        <td>Varanasi; a handful of traditional scholars in South India</td>
+        <td class="note">The full Mīmāṃsā tradition (Jaimini + Śabara-bhāṣya + Kumārila + Prabhākara) is now studied by very few practitioners with living guru transmission</td>
+      </tr>
+      <tr>
+        <td class="shastra">Śrīvidyā Tantra (Āgamic śāstra)</td>
+        <td><span class="tag jade">Living</span></td>
+        <td>Tamil Nadu (Śṛṅgeri, Kanchipuram); Kerala; North Indian Śākta seats; increasingly global diaspora</td>
+        <td class="note">One of the most actively transmitted Āgamic traditions; the convergence of Śrīvidyā with the Vedānta of the Śaṅkara maṭhas has created an institutional stability unusual for Tantric traditions</td>
+      </tr>
+      <tr>
+        <td class="shastra">Carnatic music (Gāndharvaveda descendant)</td>
+        <td><span class="tag jade">Living (vigorously)</span></td>
+        <td>South India; large diaspora communities globally; Chennai as the primary institutional centre</td>
+        <td class="note">The most publicly visible surviving descendant of the Vedic śāstric tradition; the guru-śiṣya paramparā of Carnatic music is under pressure from institutional education models but retains significant vitality</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>What Śaṅkara Would See — And His Metaphor for Transmission Loss</h3>
+      <p>Śaṅkara's metaphor for the consequence of a broken transmission is drawn from the Chāndogya Upaniṣad's story of Śvetaketu, who returns from twelve years of Vedic study convinced he knows everything — but has not received the central teaching (<span class="iast">mahāvākya</span>) because his teachers did not know it themselves. His father Uddālaka Āruṇi then provides the nine "<span class="dn">तत् त्वम् असि</span>" instructions, each time using a different example (the tree, the salt in water, the subtle essence) to lead the student to the recognition the student came to the teacher incapable of receiving — because the student did not know that what they needed to receive was different from what they had been given.</p>
+      <p>Śaṅkara's comment in the Chāndogya-Bhāṣya at this point is precise: <em>a broken transmission does not produce ignorance — it produces a particular, more dangerous condition: the conviction of knowledge without the thing known</em>. The student who has never encountered the mahāvākya teaching knows they are missing something and can seek a teacher. The student who has encountered twelve years of perfectly correct Vedic recitation and ritual performance without the central teaching is not obviously missing anything — they have a credential. The transmission loss that most threatens the śāstric tradition is therefore not the complete absence of practice but the continuation of the outer form without the inner thread.</p>
+    </div>
+    <div class="panel">
+      <h3>The Digital Opportunity and Its Structural Limit</h3>
+      <p>The digitisation of Sanskrit manuscripts, the availability of critical editions, the global reach of online teaching — these have created an unprecedented accessibility of śāstric texts. The DLI (Digital Library of India), GRETIL, the Muktabodha Indological Research Institute's manuscript database, and comparable projects have made available more śāstric material than any single scholar could read in a lifetime. This is a genuine and historically unprecedented preservation achievement.</p>
+      <p>And yet the Pāṇinīya-Śikṣā's opening verse — <em>"without the śāstra, the Veda does not reach its correct regulation"</em> — contains an implicit rejoinder. Texts are the record of a śāstra; they are not the śāstra. A śāstra is a living discipline in which the text, the commentary, the demonstration, the initiation, and the lineage operate simultaneously. What digitisation preserves is the text layer and, with audio-video archives, the demonstration layer. It does not preserve — and by its nature cannot preserve — the initiation layer and the guru-to-student transmission that the tradition understood as the precondition for everything else. The lamp-lighting-lamp metaphor applies here: digital access to every word Śaṅkara wrote is not the same as having one's lamp lit. It is — and this is worth being precise about — an extraordinarily valuable record of how a lamp worked, which is itself an essential precondition for the next lighting, but is not the lighting itself.</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Convergence Points — Where the Threads of Part I Meet the Living Present</h3>
+    <p>The five foundational threads of Part I converge in a small number of contemporary practices with unusual completeness:</p>
+    <div class="grid3">
+      <div>
+        <h4>The Śrīvidyā Pañcadaśī Upāsanā</h4>
+        <p style="font-size:14.5px;">Combines: Vedāṅga phonology (correct pronunciation of bījas) · Pāṇinian phoneme-analysis (the Śivasūtras as the source of the mātṛkā) · Bhartṛhari's Śabda-Brahman (the bīja as sphoṭa) · Śaṅkara's Advaita (the Devī as Brahman, worship as aparokṣa-jñāna) · Living guru-paramparā. This is, in the terms of Part I, the densest convergence point of the śāstric tradition available to a practitioner today.</p>
+      </div>
+      <div>
+        <h4>Carnatic Rāga Ālāpana</h4>
+        <p style="font-size:14.5px;">Combines: Sāmaveda tonal structure (the seven svaras as a continuous inheritance from Vedic pitch-accent) · Gāndharvaveda's systematic classification of intervals · The 72-Mēḷakarta system (a purely śāstric construction, as formal as Pāṇini's grammar) · The guru-śiṣya oral transmission of the rāga's characteristic phrases (gamakas) that cannot be notated. The ālāpana is a sphoṭa-event: the rāga's identity is revealed through the individual phrases without being identical to any one of them.</p>
+      </div>
+      <div>
+        <h4>Brahmasūtra Adhyayana with Bhāṣya</h4>
+        <p style="font-size:14.5px;">Combines: Mīmāṃsā hermeneutics (the śruti-liṅga-vākya-prakaraṇa hierarchy for interpreting Upaniṣadic passages) · Nyāya inference structure (the pūrvapakṣa-siddhānta-dūṣaṇa format) · Vyākaraṇa (every term in Śaṅkara's bhāṣya is grammatically precise and requires Pāṇinian analysis to be fully understood) · Living paramparā. This is the most academically challenging convergence point and the one where the textual layer most urgently requires the oral commentary to be made intelligible.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="cl-head">The Thread That Holds — Śaṅkara's Final Answer</div>
+    <p style="font-size:15.5px;">At the conclusion of his Bṛhadāraṇyaka-Bhāṣya, commenting on the passage where Yājñavalkya instructs Maitreyī and then departs for the forest, Śaṅkara observes that the teacher's final act — departure — is itself the teaching. What the guru ultimately gives the student is not knowledge that the student did not have but the removal of the obstacle to recognising what was always already there. The śāstras, from the first Prātiśākhya to the Vākyapadīya, are in this reading not paths to a destination but maps showing the student that they are already at the destination they are looking for. The sphoṭa was always the meaning; the flame was always the light; the Ātman was always Brahman. The entire four-thousand-year tradition of śāstric elaboration is, from within the Advaita meta-perspective, an extremely elaborate and beautiful pointing at a moon that was never hidden — only overlooked. That it takes this much pointing is not a failure of the moon; it is the precise measure of the depth of avidyā and the compassion of those who chose to keep pointing anyway.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-practical')">← प्रयोगः</span>
+    <a class="fn-btn" href="shastra-series-part2.html">Continue to Part II →</a>
+  </div>
+</section>
 </body>
 </html>
