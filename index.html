@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>शास्त्रोद्भवः · The Birth of the Śāstras — Part I | Cultural Musings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#c9a86a; --gold-bright:#e8cb8a; --crimson:#7a1f2b; --crimson-bright:#9c2c3a;
+  --bg:#0e0a08; --panel:#17120f; --panel-2:#1d1713; --border:#3a2e22;
+  --text:#e8ddc8; --text-dim:#a89884; --text-faint:#7a6c5a;
+  --cream:#f3ead6; --saffron:#d9883f; --indigo:#3d4a6b;
+  --jade:#2e6b4f; --jade-bright:#4a9e77;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:'EB Garamond',serif; font-size:18px; line-height:1.75;
+  background-image:
+    radial-gradient(ellipse at top left,rgba(122,31,43,0.08),transparent 60%),
+    radial-gradient(ellipse at bottom right,rgba(201,168,106,0.06),transparent 60%);
+}
+.dn{font-family:'Noto Serif Devanagari',serif;}
+h1,h2,h3,h4,.display{font-family:'Cinzel',serif;letter-spacing:0.02em;}
+.cg{font-family:'Cormorant Garamond',serif;}
+
+/* ── LAYOUT ── */
+.app{display:flex;min-height:100vh;}
+
+/* SIDEBAR */
+.sidebar{
+  width:280px;flex-shrink:0;
+  background:linear-gradient(180deg,#120d0a,#0a0706);
+  border-right:1px solid var(--border);
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+  padding:28px 0 40px;
+}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px;}
+.brand{padding:0 24px 22px;border-bottom:1px solid var(--border);margin-bottom:18px;}
+.brand .om{font-size:34px;color:var(--gold-bright);display:block;margin-bottom:6px;}
+.brand h1{font-size:14px;color:var(--cream);line-height:1.35;letter-spacing:0.04em;}
+.brand p{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--text-faint);margin-top:6px;font-style:italic;}
+.navgroup{margin-bottom:4px;}
+.navgroup .label{font-size:10px;text-transform:uppercase;letter-spacing:0.14em;color:var(--text-faint);padding:12px 24px 5px;}
+.navlink{
+  display:block;padding:8px 24px;color:var(--text-dim);
+  text-decoration:none;font-size:13.5px;border-left:2px solid transparent;
+  transition:all .15s ease;cursor:pointer;
+}
+.navlink:hover{color:var(--gold-bright);background:rgba(201,168,106,0.05);}
+.navlink.active{color:var(--gold-bright);border-left-color:var(--crimson-bright);background:rgba(122,31,43,0.12);}
+
+/* SERIES NAV */
+.series-nav{
+  margin:16px 24px 0;padding:14px 16px;
+  background:rgba(201,168,106,0.05);border:1px solid var(--border);border-radius:5px;
+}
+.series-nav .sn-label{font-family:'Cinzel';font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--saffron);margin-bottom:8px;}
+.series-nav a{display:block;font-size:12.5px;color:var(--text-faint);text-decoration:none;padding:3px 0;transition:color .15s;}
+.series-nav a:hover{color:var(--gold-bright);}
+.series-nav a.current{color:var(--gold-bright);font-weight:600;}
+
+/* MAIN */
+.main{flex:1;min-width:0;}
+.breadcrumb{
+  position:sticky;top:0;z-index:30;
+  background:rgba(14,10,8,0.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+  padding:12px 40px;font-size:13px;color:var(--text-faint);
+  display:flex;align-items:center;gap:8px;
+}
+.breadcrumb span.cur{color:var(--gold);}
+
+.tabbar{
+  position:sticky;top:41px;z-index:29;
+  display:flex;overflow-x:auto;
+  background:var(--panel);border-bottom:1px solid var(--border);
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--gold) var(--panel);
+}
+.tabbar::-webkit-scrollbar{height:4px;}
+.tabbar::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px;}
+.tabbtn{
+  flex-shrink:0;padding:12px 18px;font-size:13px;color:var(--text-dim);
+  background:none;border:none;cursor:pointer;white-space:nowrap;
+  border-bottom:2px solid transparent;font-family:'EB Garamond',serif;letter-spacing:0.03em;
+}
+.tabbtn:hover{color:var(--gold-bright);}
+.tabbtn.active{color:var(--gold-bright);border-bottom-color:var(--crimson-bright);background:rgba(122,31,43,0.08);}
+
+.section{padding:52px 56px 70px;max-width:1160px;}
+.section.hidden{display:none;}
+.eyebrow{
+  font-family:'Cinzel';font-size:11px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--saffron);margin-bottom:14px;display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--saffron);}
+h2.title{font-size:32px;color:var(--cream);margin-bottom:8px;line-height:1.25;}
+h2.title .dn{color:var(--gold-bright);display:block;font-size:28px;margin-bottom:6px;}
+.lede{
+  font-family:'Cormorant Garamond';font-size:20px;color:var(--text-dim);
+  font-style:italic;max-width:780px;margin:16px 0 34px;line-height:1.65;
+}
+.panel{
+  background:var(--panel);border:1px solid var(--border);border-radius:6px;
+  padding:24px 28px;margin-bottom:22px;
+}
+.panel h3{color:var(--gold-bright);font-size:17px;margin-bottom:12px;letter-spacing:0.02em;}
+.panel h4{color:var(--text);font-size:15px;margin:16px 0 8px;font-family:'Cinzel';}
+p{margin-bottom:14px;}
+p:last-child{margin-bottom:0;}
+.sanskrit-block{
+  font-family:'Noto Serif Devanagari';font-size:21px;color:var(--cream);
+  background:var(--panel-2);border-left:3px solid var(--crimson-bright);
+  padding:15px 22px;margin:18px 0;border-radius:0 4px 4px 0;line-height:1.9;
+}
+.iast{font-family:'Cormorant Garamond';font-style:italic;color:var(--gold);font-size:16.5px;}
+.gloss{color:var(--text-dim);font-size:15px;margin-top:6px;}
+blockquote{
+  border-left:3px solid var(--gold);padding:10px 20px;margin:18px 0;
+  font-family:'Cormorant Garamond';font-style:italic;font-size:18.5px;color:var(--text);
+  background:rgba(201,168,106,0.04);
+}
+blockquote cite{display:block;margin-top:8px;font-size:13px;color:var(--text-faint);font-style:normal;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+@media(max-width:900px){.grid2,.grid3{grid-template-columns:1fr;}}
+
+/* ── CHRONOLOGY TABLE ── */
+table.chron{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px;}
+table.chron thead tr{background:rgba(122,31,43,0.18);}
+table.chron th{
+  text-align:left;color:var(--gold-bright);font-family:'Cinzel';
+  font-size:11px;letter-spacing:0.06em;text-transform:uppercase;
+  padding:11px 14px;border-bottom:2px solid var(--crimson);
+}
+table.chron td{padding:10px 14px;border-bottom:1px solid rgba(58,46,34,0.5);color:var(--text-dim);vertical-align:top;}
+table.chron tr:hover td{background:rgba(201,168,106,0.03);}
+table.chron td.era{color:var(--saffron);font-family:'Cinzel';font-size:12.5px;white-space:nowrap;}
+table.chron td.shastra{color:var(--gold-bright);font-weight:600;}
+table.chron td.note{font-size:14px;color:var(--text-faint);}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:36px;margin:24px 0;}
+.timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--crimson),var(--gold),transparent);}
+.tl-item{position:relative;margin-bottom:28px;}
+.tl-item::before{
+  content:'';position:absolute;left:-30px;top:6px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--crimson-bright);border:2px solid var(--gold);
+}
+.tl-item.milestone::before{background:var(--gold-bright);width:16px;height:16px;left:-32px;}
+.tl-date{font-family:'Cinzel';font-size:11.5px;color:var(--saffron);letter-spacing:0.08em;margin-bottom:4px;}
+.tl-title{font-family:'Cinzel';font-size:15px;color:var(--cream);margin-bottom:6px;}
+.tl-body{font-size:15px;color:var(--text-dim);line-height:1.65;}
+
+/* ── SPECIAL CALLOUT ── */
+.callout{
+  border:1px solid var(--gold);border-radius:6px;padding:20px 24px;margin:20px 0;
+  background:rgba(201,168,106,0.04);
+}
+.callout .cl-head{font-family:'Cinzel';font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:8px;}
+
+/* ── TAGS ── */
+.tag{display:inline-block;font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;padding:2px 8px;border-radius:3px;border:1px solid var(--border);color:var(--text-faint);margin-right:6px;margin-bottom:4px;}
+.tag.veda{border-color:var(--crimson);color:var(--crimson-bright);}
+.tag.gold{border-color:var(--gold);color:var(--gold-bright);}
+.tag.jade{border-color:var(--jade);color:var(--jade-bright);}
+
+/* ── FOOTER NAV ── */
+.footer-nav{display:flex;justify-content:space-between;align-items:center;margin-top:50px;padding-top:24px;border-top:1px solid var(--border);}
+.fn-btn{color:var(--gold);text-decoration:none;font-size:14px;cursor:pointer;font-family:'Cinzel';letter-spacing:0.04em;}
+.fn-btn:hover{color:var(--gold-bright);}
+.part-badge{
+  font-family:'Cinzel';font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  padding:5px 14px;border:1px solid var(--gold);border-radius:3px;color:var(--gold-bright);
+}
+
+/* ── MOBILE ── */
+@media(max-width:860px){
+  .sidebar{position:fixed;left:-280px;transition:left .2s;z-index:50;}
+  .sidebar.open{left:0;}
+  .section{padding:34px 18px 60px;}
+}
+.menu-toggle{display:none;}
+@media(max-width:860px){
+  .menu-toggle{display:block;position:fixed;bottom:20px;right:20px;z-index:60;
+    width:46px;height:46px;border-radius:50%;background:var(--crimson);
+    color:var(--cream);border:none;font-size:20px;cursor:pointer;}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- ═══════════ SIDEBAR ═══════════ -->
+<nav class="sidebar" id="sidebar">
+  <div class="brand">
+    <span class="om dn">ॐ</span>
+    <h1>शास्त्रोद्भवः<br><span style="font-size:11px;color:var(--text-dim);font-weight:400;">The Birth &amp; Evolution of the Śāstras</span></h1>
+    <p>culturalmusings.com · shabdabrahman companion</p>
+  </div>
+
+  <div class="navgroup">
+    <div class="label">भाग १ · Part I Contents</div>
+    <a class="navlink" data-target="s-intro">आरम्भः · What is a Śāstra?</a>
+    <a class="navlink" data-target="s-shruti">श्रुतिः · Śruti — Before Śāstra</a>
+    <a class="navlink" data-target="s-veda-origins">वेदसंहिता · The Four Vedas</a>
+    <a class="navlink" data-target="s-vedanga">वेदाङ्ग · The Six Vedāṅgas</a>
+    <a class="navlink" data-target="s-pratishakhya">प्रातिशाख्य · Prātiśākhyas</a>
+    <a class="navlink" data-target="s-chronotable1">कालक्रम · Chronology Table I</a>
+    <a class="navlink" data-target="s-first-shastra">आद्यशास्त्रम् · The First Śāstra</a>
+    <a class="navlink" data-target="s-kalpa">कल्पसूत्राणि · Kalpa Sūtras</a>
+    <a class="navlink" data-target="s-dharma">धर्मसूत्राणि · Dharma Sūtras</a>
+    <a class="navlink" data-target="s-summary1">सारः · Summary</a>
+  </div>
+
+  <div class="series-nav">
+    <div class="sn-label">पञ्चभागाः · Five‑Part Series</div>
+    <a href="shastra-series-part1.html" class="current">Part I · Origins &amp; Vedic Śāstras</a>
+    <a href="shastra-series-part2.html">Part II · Classical Śāstras (600 BCE – 300 CE)</a>
+    <a href="shastra-series-part3.html">Part III · Tantric &amp; Āgamic Śāstras</a>
+    <a href="shastra-series-part4.html">Part IV · Medieval Synthesis (900–1700 CE)</a>
+    <a href="shastra-series-part5.html">Part V · Modern Continuity</a>
+  </div>
+</nav>
+
+<!-- ═══════════ MAIN ═══════════ -->
+<main class="main">
+<div class="breadcrumb">
+  culturalmusings.com <span style="color:var(--border)">/</span> शास्त्रोद्भवः <span style="color:var(--border)">/</span>
+  <span class="cur" id="crumb">आरम्भः</span>
+</div>
+
+<div class="tabbar" id="tabbar">
+  <button class="tabbtn" data-target="s-intro">आरम्भः</button>
+  <button class="tabbtn" data-target="s-shruti">श्रुतिः</button>
+  <button class="tabbtn" data-target="s-veda-origins">वेदसंहिता</button>
+  <button class="tabbtn" data-target="s-vedanga">वेदाङ्ग</button>
+  <button class="tabbtn" data-target="s-pratishakhya">प्रातिशाख्य</button>
+  <button class="tabbtn" data-target="s-chronotable1">कालक्रम I</button>
+  <button class="tabbtn" data-target="s-first-shastra">आद्यशास्त्रम्</button>
+  <button class="tabbtn" data-target="s-kalpa">कल्पसूत्र</button>
+  <button class="tabbtn" data-target="s-dharma">धर्मसूत्र</button>
+  <button class="tabbtn" data-target="s-summary1">सारः</button>
+</div>
+
+<div id="sections-root">
+
+<!-- ═══ S0 INTRO ═══ -->
+<section class="section" id="s-intro">
+  <div class="eyebrow">भाग १ · Part I of V &nbsp;·&nbsp; Origins</div>
+  <h2 class="title">
+    <span class="dn">शास्त्रोद्भवः</span>
+    The Birth of the Śāstras — From Primordial Sound to Codified Knowledge
+  </h2>
+  <p class="lede">Before any text was written, before any school was founded, there was only the ṛṣi's act of hearing: śruti, "that which is heard." The entire history of the śāstras — India's vast, multi-millennial body of systematic knowledge — unfolds as the long echo of that first hearing, structured, tested, transmitted, and debated across four thousand years and still alive today.</p>
+
+  <div class="panel">
+    <h3>What the Word "Śāstra" Actually Means</h3>
+    <p>The Sanskrit root <span class="iast">śās</span> means to instruct, to correct, to govern, to rule — it carries simultaneously the sense of an authority that corrects error and a body of knowledge precise enough to do the correcting. A <span class="iast">śāstra</span> is therefore not simply a "book" or a "scripture" in the broad sense those English words carry; it is specifically a <em>systematic discipline</em> — a body of organised, internally consistent teaching about a defined domain, formulated with enough precision that it can be taught, questioned, applied, and refined.</p>
+    <p>This precision is exactly what distinguishes a <span class="iast">śāstra</span> from a <span class="iast">kāvya</span> (literary poetry), from a <span class="iast">purāṇa</span> (cosmological narrative), and crucially from <span class="iast">śruti</span> itself (the revealed Veda, held to be beyond authorship and therefore beyond revision). The śāstra is authored, debatable, and improvable — this is its defining characteristic. The tradition's own encyclopaedic classification lists sixty-four traditional vidyās (disciplines), fourteen principal vidyāsthānas (seats of learning), and eventually hundreds of named śāstric traditions, but all of them descend from a single moment: the decision to articulate, organise, and pass on what the Veda implied.</p>
+    <div class="sanskrit-block">
+      शास्ति इति शास्त्रम् — यत् शिक्षते, नियमयते, प्रमाणयते च ।
+    </div>
+    <p class="gloss">"That which teaches, regulates, and establishes authority — that is śāstra." (Traditional grammatical derivation)</p>
+  </div>
+
+  <div class="grid3">
+    <div class="panel" style="text-align:center;">
+      <div style="font-size:28px;color:var(--gold-bright);font-family:'Cinzel';">~4000</div>
+      <div style="font-size:13px;color:var(--text-faint);margin-top:6px;">Years of continuous śāstric tradition, from earliest Ṛgvedic composition to the present</div>
+    </div>
+    <div class="panel" style="text-align:center;">
+      <div style="font-size:28px;color:var(--gold-bright);font-family:'Cinzel';">64</div>
+      <div style="font-size:13px;color:var(--text-faint);margin-top:6px;">Traditional vidyās (disciplines) named in classical encyclopaedic enumerations</div>
+    </div>
+    <div class="panel" style="text-align:center;">
+      <div style="font-size:28px;color:var(--gold-bright);font-family:'Cinzel';">14</div>
+      <div style="font-size:13px;color:var(--text-faint);margin-top:6px;">Vidyāsthānas (seats of foundational learning) in the canonical enumeration</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="cl-head">How to Read This Series</div>
+    <p style="font-size:15.5px;">This five-part study presents the chronological emergence of the śāstras in two registers simultaneously: a <strong>narrative thread</strong> explaining each tradition's context, purpose, and intellectual character; and a <strong>formal chronology table</strong> in each part that can be read independently as a reference timeline. Each part covers roughly one major civilisational epoch. Part I covers the deepest stratum — Śruti and the Vedic auxiliaries (approximately 2000–600 BCE). Parts II through V carry the story through the classical, Āgamic, medieval, and modern periods.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="part-badge">Part I · Origins</span>
+    <span class="fn-btn" onclick="showSection('s-shruti')">Next: श्रुतिः →</span>
+  </div>
+</section>
+
+<!-- ═══ S1 SHRUTI ═══ -->
+<section class="section hidden" id="s-shruti">
+  <div class="eyebrow">अध्यायः १ · The Ground Before Śāstra</div>
+  <h2 class="title"><span class="dn">श्रुतिः</span>Śruti — The Heard, the Unhuman, the Primordial</h2>
+  <p class="lede">The śāstra tradition begins not with a human author deciding to write a textbook, but with a different and far more radical claim: that the fundamental structure of reality itself is acoustic, and that certain human beings — the ṛṣis, "seers" — were capable of directly perceiving it.</p>
+
+  <div class="panel">
+    <h3>The Concept of Apauruṣeyatva — Authourlessness</h3>
+    <p>The Vedic tradition's most distinctive and philosophically consequential claim is that the Veda is <span class="iast">apauruṣeya</span> — not authored by any person, not composed in any historical moment, but "heard" (śruta) by the ṛṣis in states of direct, non-inferential perception. The ṛṣi is not the Veda's author but its first transmitter — the first node in a chain of oral passage that, in the tradition's self-understanding, has no beginning other than the sound-structure of reality itself.</p>
+    <p>This claim is not merely a theological decoration; it has a direct and determinative effect on the entire subsequent history of the śāstras. Because the Veda is held to be authorless and beyond improvement, <em>nothing that follows it can claim the same absolute authority</em>. Every later śāstra — grammar, medicine, astronomy, jurisprudence, aesthetics — situates itself as a derivation from, an explanation of, or an auxiliary to the Veda. The śāstra is, by definition, secondary — authored, therefore revisable. This is why the tradition has been able to produce centuries of productive debate, commentary, and counter-commentary without any of it counting as a "correction" of the Veda itself.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>Śruti vs. Smṛti — The Foundational Distinction</h3>
+      <p>The tradition draws a firm line between two categories of authoritative text:</p>
+      <table class="chron">
+        <tr><th>Category</th><th>Meaning</th><th>Examples</th><th>Status</th></tr>
+        <tr><td class="shastra">Śruti</td><td>That which is heard / perceived</td><td>The four Vedic Saṁhitās, Brāhmaṇas, Āraṇyakas, Upaniṣads</td><td>Absolute authority, apauruṣeya</td></tr>
+        <tr><td class="shastra">Smṛti</td><td>That which is remembered / composed</td><td>Dharmaśāstras, Itihāsas, Purāṇas, all technical śāstras</td><td>Human-authored, authoritative but revisable</td></tr>
+      </table>
+      <p style="font-size:14.5px;">Where smṛti and śruti appear to conflict, the tradition holds that śruti wins — but commentators then expend enormous ingenuity showing that the conflict is only apparent, not real. The creative tension between these two authorities generated much of the finest Indian philosophical writing.</p>
+    </div>
+    <div class="panel">
+      <h3>The Ṛṣis and the Gotra System</h3>
+      <p>The Ṛgveda's ten maṇḍalas (books) are associated with specific ṛṣi families — Vasiṣṭha, Viśvāmitra, Bharadvāja, Atri, Gotama, Kaśyapa, and others — whose lineages became the <span class="iast">gotra</span> (lineage) system still used today in Brahminical ritual identification. Each family was associated with a specific body of Vedic text and a specific recitation style (<span class="iast">śākhā</span> — "branch"), preserving not only the words but the exact pitch accent and phonetic tradition of their founding ṛṣi.</p>
+      <p>This family-lineage structure meant that the earliest "śāstric" enterprises — the Prātiśākhyas and Śikṣās discussed in Chapters 5 and following — were in the first instance family enterprises: texts written to preserve <em>this family's</em> exact phonetic tradition, not generic phonetics textbooks. The personal, lineage-embedded character of early Indian knowledge transmission is essential context for understanding why the śāstra tradition produced such richly divergent sub-traditions even within a single nominal topic.</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Oral Transmission as a Technology of Exact Preservation</h3>
+    <p>The transition from Śruti (perceived revelation) to Śāstra (systematic, teachable discipline) required a prior technology: a method of transmitting the revealed text without error across generations, in the complete absence of writing. The solution the tradition developed — described in detail in the companion <em>Śabda-Brahman</em> resource's Chapter 5 — is the most sophisticated oral-transmission system devised by any culture, employing six or more permutation-recitation styles (pāṭhas) that together function as an error-correcting code for human memory.</p>
+    <p>What matters here is the consequence: by the time the first śāstric authors began composing systematic texts about phonetics, ritual, or grammar, they were already working within a culture that had spent one or more millennia developing, refining, and institutionalising the techniques for exact knowledge-transmission. The precision, the concern for formalism, the anxiety about error that marks all early Indian śāstric writing is not an accident of personality; it is the intellectual inheritance of a tradition whose first, most urgent problem was preserving a body of sound — the Veda — without allowing a single phoneme to drift.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-intro')">← आरम्भः</span>
+    <span class="fn-btn" onclick="showSection('s-veda-origins')">Next: वेदसंहिता →</span>
+  </div>
+</section>
+
+<!-- ═══ S2 VEDA ORIGINS ═══ -->
+<section class="section hidden" id="s-veda-origins">
+  <div class="eyebrow">अध्यायः २ · The Vedic Corpus</div>
+  <h2 class="title"><span class="dn">वेदसंहिता</span>The Four Vedas — Structure, Content, and the Implied Śāstras Within</h2>
+  <p class="lede">The Veda is not one book. It is a vast, stratified literature in four parallel streams, each stream internally organised into four distinct textual types — a structure so elaborate that the śāstras begin, in a sense, as the tradition trying to understand its own foundational texts.</p>
+
+  <div class="panel">
+    <h3>The Four Vedas and Their Internal Architecture</h3>
+    <table class="chron">
+      <tr><th>Veda</th><th>Sanskrit Name</th><th>Primary Content</th><th>Liturgical Role</th><th>Est. Core Date</th></tr>
+      <tr>
+        <td class="shastra">Ṛgveda</td>
+        <td><span class="dn">ऋग्वेद</span></td>
+        <td>1,028 hymns (sūktas) in ten maṇḍalas; praises of deities, cosmogonic hymns</td>
+        <td>Recited by the hotṛ priest; the verbal/phonetic core of the sacrifice</td>
+        <td class="era">~1500–1200 BCE (oldest portions)</td>
+      </tr>
+      <tr>
+        <td class="shastra">Sāmaveda</td>
+        <td><span class="dn">सामवेद</span></td>
+        <td>~1,875 verses, mostly drawn from Ṛgveda but notated with melodic svaras</td>
+        <td>Sung by the udgātṛ priest; the musical transformation of Ṛgvedic text</td>
+        <td class="era">~1200–1000 BCE</td>
+      </tr>
+      <tr>
+        <td class="shastra">Yajurveda</td>
+        <td><span class="dn">यजुर्वेद</span></td>
+        <td>Prose and verse formulas (yajus) for ritual action; in two recensions (Black/White)</td>
+        <td>Used by the adhvaryu priest who physically performs the rite</td>
+        <td class="era">~1200–800 BCE</td>
+      </tr>
+      <tr>
+        <td class="shastra">Atharvaveda</td>
+        <td><span class="dn">अथर्ववेद</span></td>
+        <td>Hymns for healing, protection, love, and cosmological speculation; 20 kāṇḍas</td>
+        <td>Brahman priest overseeing the whole; later linked to rasa, Āyurveda, Tantra</td>
+        <td class="era">~1200–900 BCE</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h3>The Four Textual Strata Within Each Veda</h3>
+    <p>Every Vedic stream is internally stratified into four successive layers, each composed later than the one before it and each representing a different hermeneutic relationship to the foundational hymns:</p>
+    <div class="grid2">
+      <div>
+        <h4>१. Saṁhitā — The Hymn Collection</h4>
+        <p style="font-size:15px;">The core, most ancient layer — the actual hymns, verses, and mantras. This is what is typically meant when people say "the Ṛgveda" or "the Atharvaveda." The Saṁhitā is Śruti in its most fundamental form: pure sound, organised into hymns addressed to deities, entirely without explanatory prose.</p>
+
+        <h4>२. Brāhmaṇa — The Ritual Exegesis</h4>
+        <p style="font-size:15px;">Prose texts explaining the what and why of each ritual action associated with the Saṁhitā's mantras. The Brāhmaṇas (e.g. Śatapatha Brāhmaṇa, Aitareya Brāhmaṇa) are the first large-scale Indian texts to reason discursively about the connection between word, action, and cosmic effect — making them, in a real sense, the first śāstric prose, even if they are themselves classified as Śruti.</p>
+      </div>
+      <div>
+        <h4>३. Āraṇyaka — The Forest Texts</h4>
+        <p style="font-size:15px;">Transitional texts composed for study in the forest — too dangerous or esoteric for the village — bridging the outward ritual world of the Brāhmaṇas and the inward philosophical world of the Upaniṣads. They begin the interpretive move from external sacrifice to internal contemplation.</p>
+
+        <h4>४. Upaniṣad — The Philosophical Culmination</h4>
+        <p style="font-size:15px;">The Upaniṣads (literally "sitting near [a teacher]") articulate the philosophical theology implicit in the ritual system — the identity of Ātman and Brahman, the nature of consciousness, the theory of rebirth and liberation. The principal Upaniṣads (Bṛhadāraṇyaka, Chāndogya, Taittirīya, Māṇḍūkya, Kaṭha, Muṇḍaka, and ten others) become the textual foundation for all subsequent Vedāntic śāstras.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="cl-head">The Key Insight: Śāstra Is the Veda's Own Self-Commentary</div>
+    <p style="font-size:15.5px;">The four strata themselves demonstrate the principle underlying the entire śāstric project: the Vedic tradition, from the very beginning, was not content to simply recite and transmit; it felt the need to <em>explain</em> — to articulate why a ritual action was performed in a certain sequence, what made a particular mantra effective, what the connection was between the words recited and the cosmic forces they were addressed to. The Brāhmaṇas are already doing śāstric work before anyone coined the word śāstra. The entire subsequent history of Indian systematic knowledge is, in this sense, the Veda talking to itself across time.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-shruti')">← श्रुतिः</span>
+    <span class="fn-btn" onclick="showSection('s-vedanga')">Next: वेदाङ्ग →</span>
+  </div>
+</section>
+
+<!-- ═══ S3 VEDANGA ═══ -->
+<section class="section hidden" id="s-vedanga">
+  <div class="eyebrow">अध्यायः ३ · The First True Śāstras</div>
+  <h2 class="title"><span class="dn">वेदाङ्गानि</span>The Six Vedāṅgas — The Veda's Own Body of Auxiliaries</h2>
+  <p class="lede">The six Vedāṅgas ("limbs of the Veda") represent the first explicit, named, disciplinary division of knowledge in the Sanskrit tradition — the moment when the single body of Vedic transmission differentiated into six separate systematic sciences, each with its own methodology, technical vocabulary, and eventually its own sūtra literature.</p>
+
+  <div class="panel">
+    <h3>The Classical Enumeration of the Six Vedāṅgas</h3>
+    <p>The six are named together in the <span class="iast">Muṇḍaka Upaniṣad</span> (1.1.5) among the subjects taught at a teacher's feet, establishing their status as the first "school curriculum" of the Sanskrit tradition. Each is related to the Veda through an explicit bodily metaphor:</p>
+    <table class="chron">
+      <tr><th>Vedāṅga</th><th>Devanāgarī</th><th>Discipline</th><th>Limb Metaphor</th><th>Primary Text Type</th><th>Est. Date Range</th></tr>
+      <tr>
+        <td class="shastra">Śikṣā</td><td><span class="dn">शिक्षा</span></td>
+        <td>Phonetics — correct pronunciation of every phoneme</td>
+        <td>Nose (breath/sound)</td>
+        <td>Śikṣā texts per Vedic school</td>
+        <td class="era">~800–400 BCE</td>
+      </tr>
+      <tr>
+        <td class="shastra">Chandas</td><td><span class="dn">छन्दः</span></td>
+        <td>Metrics — the science of verse forms and their rules</td>
+        <td>Feet (the metre the Veda walks in)</td>
+        <td>Piṅgalācārya's Chandaḥśāstra</td>
+        <td class="era">~400–200 BCE</td>
+      </tr>
+      <tr>
+        <td class="shastra">Vyākaraṇa</td><td><span class="dn">व्याकरण</span></td>
+        <td>Grammar — analysis of the language structure of the Veda</td>
+        <td>Mouth (articulate speech itself)</td>
+        <td>Pāṇini's Aṣṭādhyāyī (c. 4th century BCE)</td>
+        <td class="era">~1000–350 BCE (culminating in Pāṇini)</td>
+      </tr>
+      <tr>
+        <td class="shastra">Nirukta</td><td><span class="dn">निरुक्त</span></td>
+        <td>Etymology — explaining difficult Vedic words and their roots</td>
+        <td>Ear (understanding what is heard)</td>
+        <td>Yāska's Nirukta (c. 6th–5th century BCE)</td>
+        <td class="era">~600–400 BCE</td>
+      </tr>
+      <tr>
+        <td class="shastra">Jyotiṣa</td><td><span class="dn">ज्योतिष</span></td>
+        <td>Astronomy/Astrology — fixing the correct times for ritual</td>
+        <td>Eyes (seeing the right moment)</td>
+        <td>Vedāṅga Jyotiṣa, Lagadha</td>
+        <td class="era">~1400–1200 BCE (oldest Jyotiṣa verses)</td>
+      </tr>
+      <tr>
+        <td class="shastra">Kalpa</td><td><span class="dn">कल्प</span></td>
+        <td>Ritual procedure — how to perform every sacrifice correctly</td>
+        <td>Hands (action in ritual)</td>
+        <td>Śrauta, Gṛhya, Dharma Sūtras</td>
+        <td class="era">~800–300 BCE</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>Why the Vedāṅgas Are the True Founding Śāstras</h3>
+      <p>The Vedāṅgas are sometimes treated as merely "secondary" auxiliaries subordinate to the Veda — but this undersells their intellectual importance. Each Vedāṅga represents a genuinely independent act of analysis: the authors of the Śikṣā texts had to invent the tools of articulatory phonetics from scratch to describe the Veda's sounds precisely. The Vyākaraṇa authors had to invent formal grammar — a systematic algebraic description of language — centuries before any comparable enterprise was attempted elsewhere. The Chandas tradition developed a complete mathematical theory of combinatorics to enumerate all possible verse forms.</p>
+      <p>These are not derivative exercises; they are founding acts of intellectual discipline. What makes them Vedāṅgas rather than independent śāstras is not intellectual inferiority but institutional function: they were composed explicitly <em>in service of</em> the Veda, to solve specific problems generated by the need to preserve and perform it correctly.</p>
+    </div>
+    <div class="panel">
+      <h3>The Upavedas — Four Applied Sciences</h3>
+      <p>Running parallel to the six Vedāṅgas, tradition also enumerates four <span class="iast">Upavedas</span> ("secondary Vedas") — applied disciplines whose content is held to derive from a specific Veda:</p>
+      <table class="chron">
+        <tr><th>Upaveda</th><th>Source Veda</th><th>Discipline</th></tr>
+        <tr><td class="shastra">Āyurveda</td><td>Atharvaveda</td><td>Medicine and life-science</td></tr>
+        <tr><td class="shastra">Dhanurveda</td><td>Yajurveda</td><td>Military science and archery</td></tr>
+        <tr><td class="shastra">Gāndharvaveda</td><td>Sāmaveda</td><td>Music and performing arts</td></tr>
+        <tr><td class="shastra">Arthaśāstra (Sthāpatyaveda)</td><td>Ṛgveda</td><td>Political economy / architecture</td></tr>
+      </table>
+      <p style="font-size:14.5px;">The Upavedas demonstrate that even highly practical, technical disciplines — military tactics, clinical medicine — were integrated into the Vedic framework, subordinated to it rhetorically even while developing independent professional traditions.</p>
+    </div>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-veda-origins')">← वेदसंहिता</span>
+    <span class="fn-btn" onclick="showSection('s-pratishakhya')">Next: प्रातिशाख्य →</span>
+  </div>
+</section>
+
+<!-- ═══ S4 PRATISHAKHYA ═══ -->
+<section class="section hidden" id="s-pratishakhya">
+  <div class="eyebrow">अध्यायः ४ · The Phonetic Śāstras</div>
+  <h2 class="title"><span class="dn">प्रातिशाख्यम्</span>The Prātiśākhyas — Phonetics as Exact Science Before Pāṇini</h2>
+  <p class="lede">The Prātiśākhyas are, in the most literal sense, the oldest systematic śāstric texts that survive — detailed phonetic treatises composed by each Vedic school for its own recitation tradition, representing the first attempt in any culture to describe language structure scientifically.</p>
+
+  <div class="panel">
+    <h3>What a Prātiśākhya Is and Does</h3>
+    <p>The word <span class="iast">prātiśākhya</span> itself means "according to the śākhā (branch/school)" — each major Vedic school composed its own phonetic treatise specific to its own textual tradition. The Prātiśākhya describes, with algebraic precision, every sandhi (junction) rule, every permitted phoneme combination, every rule of accent (<span class="iast">svara</span>) assignment, and every articulatory rule that a reciter of that school must follow to perform their text correctly. The surviving Prātiśākhyas include:</p>
+    <table class="chron">
+      <tr><th>Prātiśākhya</th><th>School (Śākhā)</th><th>Veda</th><th>Est. Date</th><th>Notable Feature</th></tr>
+      <tr>
+        <td class="shastra">Ṛk-Prātiśākhya</td><td>Śākalya</td><td>Ṛgveda</td>
+        <td class="era">~600–400 BCE</td>
+        <td class="note">Most comprehensive surviving account of Vedic phonology; describes 63 rules of sandhi precisely</td>
+      </tr>
+      <tr>
+        <td class="shastra">Taittirīya-Prātiśākhya</td><td>Taittirīya</td><td>Black Yajurveda</td>
+        <td class="era">~600–400 BCE</td>
+        <td class="note">Uses an explicit feature notation for sounds — a precursor to distinctive-feature analysis in modern phonology</td>
+      </tr>
+      <tr>
+        <td class="shastra">Atharvaveda-Prātiśākhya (Śaunakīya)</td><td>Śaunaka</td><td>Atharvaveda</td>
+        <td class="era">~500–300 BCE</td>
+        <td class="note">Particularly detailed on the nasal sounds and their variants — directly relevant to mātṛkā-nyāsa practice</td>
+      </tr>
+      <tr>
+        <td class="shastra">Vājasaneyi-Prātiśākhya</td><td>Mādhyandina</td><td>White Yajurveda</td>
+        <td class="era">~400–200 BCE</td>
+        <td class="note">Attributed to Kātyāyana; works alongside Pāṇini's grammar rather than as a predecessor</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>The Phonetic Achievement — What They Got Right</h3>
+      <p>The Prātiśākhyas and their companion Śikṣā texts together constitute what remains, even by modern standards, a remarkably accurate descriptive account of Sanskrit phonology:</p>
+      <ul style="padding-left:18px;font-size:15px;line-height:2;">
+        <li>Complete place-of-articulation (sthāna) classification matching modern articulatory phonetics</li>
+        <li>Complete manner-of-articulation (prayatna) analysis — voiced/voiceless, aspirated/unaspirated, nasal/oral</li>
+        <li>Full systematic account of Vedic pitch accent (three tones: udātta, anudātta, svarita)</li>
+        <li>Comprehensive sandhi rules governing the phonetic behaviour of words in combination</li>
+        <li>Duration (mātrā) distinctions: short, long, and the overlong (pluta) of three mātrās</li>
+      </ul>
+      <p style="font-size:14.5px;color:var(--text-faint);">Pāṇini's grammar (c. 4th century BCE) will later systematise and generalise from this tradition — but the phonetic analysis he builds on had already been in development for several centuries before him.</p>
+    </div>
+    <div class="panel">
+      <h3>The Śikṣā Texts — Compact Phonetics Manuals</h3>
+      <p>Where the Prātiśākhyas are comprehensive school-specific treatises, the <span class="iast">Śikṣā</span> texts are shorter, more pedagogically organised manuals for teaching correct pronunciation. The most famous surviving Śikṣā text is the <span class="iast">Pāṇinīya-Śikṣā</span>, traditionally attributed to Pāṇini's circle, which opens with the mātṛkā enumeration in its canonical order and provides the articulation rules that the <em>Śabda-Brahman</em> resource's Chapter 3 draws on directly.</p>
+      <blockquote>
+        अथ शिक्षां प्रवक्ष्यामि पाणिनीयं मतं यथा ।<br>
+        शास्त्रेण हि विना वेदो नियमं नाधिगच्छति ॥
+        <cite>Pāṇinīya-Śikṣā, opening verse — "Now I shall set forth phonetics according to Pāṇini's view; for without the śāstra, the Veda does not reach its [correct] regulation."</cite>
+      </blockquote>
+      <p style="font-size:14.5px;">This verse is itself a compact statement of the entire relationship between Śruti and Śāstra: the Veda exists, but without the śāstric discipline of phonetics, it cannot be performed correctly. Śāstra is the servant of Śruti, but a servant without whom Śruti cannot function.</p>
+    </div>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-vedanga')">← वेदाङ्ग</span>
+    <span class="fn-btn" onclick="showSection('s-chronotable1')">Next: कालक्रम I →</span>
+  </div>
+</section>
+
+<!-- ═══ S5 CHRONO TABLE 1 ═══ -->
+<section class="section hidden" id="s-chronotable1">
+  <div class="eyebrow">सन्दर्भसारणी · Reference Chronology</div>
+  <h2 class="title"><span class="dn">कालक्रमसारणी १</span>Master Chronology Table — Part I: Origins to 600 BCE</h2>
+  <p class="lede">The table below presents the datable events and textual compositions of the Vedic period in sequence. Dates are scholarly consensual ranges; absolute dates for the earliest Vedic compositions remain debated, and the ranges here represent mainstream academic estimates, not traditional reckoning.</p>
+
+  <div class="panel">
+    <h3>I. The Vedic Composition and Transmission Period (~2000–600 BCE)</h3>
+    <table class="chron">
+      <tr>
+        <th style="width:16%">Date (Approx.)</th>
+        <th style="width:22%">Text / Event</th>
+        <th style="width:18%">Category</th>
+        <th>Significance for Śāstra History</th>
+      </tr>
+      <tr>
+        <td class="era">~2000–1500 BCE</td>
+        <td class="shastra">Proto-Ṛgvedic composition begins</td>
+        <td><span class="tag veda">Śruti</span></td>
+        <td class="note">The earliest Indo-Aryan phonological tradition; oral transmission with pitch accent; the raw material from which all later phonetic śāstras are derived.</td>
+      </tr>
+      <tr>
+        <td class="era">~1500–1200 BCE</td>
+        <td class="shastra">Ṛgveda Saṁhitā — core composed</td>
+        <td><span class="tag veda">Śruti</span></td>
+        <td class="note">1,028 sūktas in 10 maṇḍalas; establishes the foundational phoneme inventory, svara (pitch accent) system, and chandas (metre) system from which all six Vedāṅgas will grow. The Nāsadīya Sūkta (10.129) already performs philosophical inquiry.</td>
+      </tr>
+      <tr>
+        <td class="era">~1400–1200 BCE</td>
+        <td class="shastra">Vedāṅga Jyotiṣa (Lagadha)</td>
+        <td><span class="tag gold">Vedāṅga</span></td>
+        <td class="note">Arguably the oldest surviving śāstric text in verse form; contains early astronomical calculations for fixing ritual timing. Among the first examples of mathematical reasoning in the service of śāstra.</td>
+      </tr>
+      <tr>
+        <td class="era">~1200–1000 BCE</td>
+        <td class="shastra">Sāmaveda Saṁhitā</td>
+        <td><span class="tag veda">Śruti</span></td>
+        <td class="note">Melodically notated transformation of Ṛgvedic verses; the origin point of Gāndharvaveda (music science). The svaras (musical tones) of Sāmaveda are the direct ancestor of rāga theory.</td>
+      </tr>
+      <tr>
+        <td class="era">~1200–800 BCE</td>
+        <td class="shastra">Yajurveda Saṁhitā (Black &amp; White)</td>
+        <td><span class="tag veda">Śruti</span></td>
+        <td class="note">First large-scale Vedic prose text; integrates mantra and explanatory prose for the first time. The Śatapatha Brāhmaṇa (associated with White Yajurveda) becomes one of the most important sources for early ritual śāstra.</td>
+      </tr>
+      <tr>
+        <td class="era">~1200–900 BCE</td>
+        <td class="shastra">Atharvaveda Saṁhitā</td>
+        <td><span class="tag veda">Śruti</span></td>
+        <td class="note">Establishes the Atharvanic tradition linking Veda to medicine (Āyurveda), protective ritual, and eventually Tantric practice. Its assignment of the brahman priest to the role of cosmic overseer lays groundwork for Vedānta.</td>
+      </tr>
+      <tr>
+        <td class="era">~1000–800 BCE</td>
+        <td class="shastra">Early Brāhmaṇa literature</td>
+        <td><span class="tag veda">Śruti (Brāhmaṇa)</span></td>
+        <td class="note">First large-scale discursive prose reasoning about ritual and cosmology. Aitareya Brāhmaṇa, Kauṣītaki Brāhmaṇa (Ṛgveda); Śatapatha Brāhmaṇa (Yajurveda — the longest Brāhmaṇa text, a treasury of mythological and ritual explanation).</td>
+      </tr>
+      <tr>
+        <td class="era">~900–700 BCE</td>
+        <td class="shastra">Āraṇyaka texts</td>
+        <td><span class="tag veda">Śruti (Āraṇyaka)</span></td>
+        <td class="note">Bridging texts; mark the inward turn from external sacrifice to internal meditation. The Bṛhadāraṇyaka Upaniṣad grows from this layer.</td>
+      </tr>
+      <tr>
+        <td class="era">~800–600 BCE</td>
+        <td class="shastra">Principal Upaniṣads composed</td>
+        <td><span class="tag veda">Śruti (Upaniṣad)</span></td>
+        <td class="note">Bṛhadāraṇyaka, Chāndogya (oldest and longest); followed by Taittirīya, Aitareya, Kaṭha, Praśna, Muṇḍaka, Māṇḍūkya. These establish the philosophical content — Ātman-Brahman identity, four states of consciousness — that all subsequent Vedānta śāstras will debate.</td>
+      </tr>
+      <tr>
+        <td class="era">~800–600 BCE</td>
+        <td class="shastra">Early Prātiśākhya composition begins</td>
+        <td><span class="tag gold">Vedāṅga · Śikṣā</span></td>
+        <td class="note">The first śāstric analyses: school-specific phonetic treatises formalising every rule of correct Vedic recitation. This is the moment the tradition begins producing explicitly systematic, rule-governed technical texts separate from the revealed corpus itself.</td>
+      </tr>
+      <tr>
+        <td class="era">~700–600 BCE</td>
+        <td class="shastra">Yāska's Nirukta</td>
+        <td><span class="tag gold">Vedāṅga · Nirukta</span></td>
+        <td class="note">The oldest surviving named-author Sanskrit śāstric text; a full etymological and semantic analysis of difficult Vedic words. Yāska already debates with earlier authorities (Śākaṭāyana, Gārgya), confirming that a prior tradition of scholarly debate on Vedic language existed for at least a century before him.</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="callout">
+    <div class="cl-head">Key Observation from Table I</div>
+    <p style="font-size:15.5px;">The table shows that the Vedic period does not simply "precede" the śāstras — it <em>generates</em> them from within. The Brāhmaṇas are already doing systematic ritual analysis (a kind of early Kalpa-śāstra) as part of the Śruti corpus itself. The explicit, named, independent śāstric tradition begins the moment the Vedic schools start writing texts <em>about</em> the Veda, rather than texts that <em>are</em> the Veda — and that moment is, at the latest, the 8th–7th centuries BCE with the Prātiśākhyas.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-pratishakhya')">← प्रातिशाख्य</span>
+    <span class="fn-btn" onclick="showSection('s-first-shastra')">Next: आद्यशास्त्रम् →</span>
+  </div>
+</section>
+
+<!-- ═══ S6 THE FIRST SHASTRA ═══ -->
+<section class="section hidden" id="s-first-shastra">
+  <div class="eyebrow">अध्यायः ५ · The Critical Question</div>
+  <h2 class="title"><span class="dn">आद्यशास्त्रम्</span>The First Śāstra — Answering the Question Precisely</h2>
+  <p class="lede">Which was the first śāstra? The question has a genuinely interesting answer that depends on how carefully one defines the terms — and different definitions yield meaningfully different but equally defensible responses.</p>
+
+  <div class="panel">
+    <h3>Four Candidate Answers, Each Defensible</h3>
+    <div class="grid2">
+      <div>
+        <h4>Answer 1: The Vedāṅga Jyotiṣa (~1400–1200 BCE)</h4>
+        <p style="font-size:15px;">If "first śāstra" means "the oldest surviving text that applies systematic, rule-governed reasoning to a defined technical domain," then the Vedāṅga Jyotiṣa — which calculates the position of the sun and moon relative to the nakṣatras in order to fix ritual dates — is the strongest candidate. It contains explicit mathematical formulas, technical definitions, and predictive rules: the hallmarks of a śāstra.</p>
+        <p style="font-size:14px;color:var(--text-faint);">Caveat: the surviving text's exact date is disputed; it may have been composed in stages, with the oldest core verses genuinely ancient but the received text later.</p>
+      </div>
+      <div>
+        <h4>Answer 2: The Prātiśākhyas (~800–600 BCE)</h4>
+        <p style="font-size:15px;">If "first śāstra" means "the first text explicitly and entirely devoted to a systematic analysis of a technical domain rather than being part of the Vedic corpus itself," then the Prātiśākhyas are the strongest candidates: they are written <em>about</em> the Veda rather than <em>as</em> the Veda, and they are systematic, exhaustive, and explicitly school-specific in their scope.</p>
+      </div>
+    </div>
+    <div class="grid2">
+      <div>
+        <h4>Answer 3: Yāska's Nirukta (~700–600 BCE)</h4>
+        <p style="font-size:15px;">If "first śāstra" means "the oldest surviving text with a named author, clearly organised into a systematic discipline with explicit methodology and debate with predecessors," then Yāska's Nirukta is the answer. It is explicitly śāstric in form: it defines its subject, lays out its method, debates alternative views, and arrives at conclusions.</p>
+      </div>
+      <div>
+        <h4>Answer 4: Pāṇini's Aṣṭādhyāyī (~4th century BCE)</h4>
+        <p style="font-size:15px;">If "first śāstra" means "the first text to achieve complete formal axiomatic systematisation of a domain — a self-contained, internally consistent, generatively complete rule-system from which all valid instances can be derived" — then Pāṇini's grammar is the answer. No earlier text comes close to its formal completeness; it is, by this measure, the founding moment of the śāstric method at its highest.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>The Tradition's Own Answer</h3>
+    <p>The tradition itself does not ask the question this way — it does not seek to identify the "oldest" śāstra in historical terms. Instead it organises its own self-understanding around a different priority: which śāstras are most fundamental to the Veda's preservation and correct performance? By that logic, the tradition places Vyākaraṇa (grammar) first among the Vedāṅgas in intellectual importance — the famous mukham ("mouth") metaphor — and Pāṇini's grammar as the pinnacle of that tradition.</p>
+    <div class="sanskrit-block">
+      व्याकरणं मुखम् — grammar is the face/mouth [of the Veda].
+    </div>
+    <p>The reasoning is precise: of all the Vedāṅgas, grammar alone is sufficient to derive all others. A perfectly trained grammarian can reconstruct the correct phonology, because phonology is a subset of morpho-phonological rules. Grammar underlies nirukta (etymological analysis) because etymology is a sub-domain of derivational morphology. And grammar generates the correct forms that all other śāstras must use in their own expression. Grammar is therefore not merely one Vedāṅga among six; it is the Vedāṅga that implicitly contains all the others. This is the tradition's answer to the question of primacy.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-chronotable1')">← कालक्रम I</span>
+    <span class="fn-btn" onclick="showSection('s-kalpa')">Next: कल्पसूत्र →</span>
+  </div>
+</section>
+
+<!-- ═══ S7 KALPA SUTRA ═══ -->
+<section class="section hidden" id="s-kalpa">
+  <div class="eyebrow">अध्यायः ६ · Ritual Śāstra</div>
+  <h2 class="title"><span class="dn">कल्पसूत्राणि</span>The Kalpa Sūtras — Ritual Systematised into Law</h2>
+  <p class="lede">The Kalpa (ritual procedure) Vedāṅga produced the most practically important body of śāstric literature for lived Hindu religion: the three families of sūtra texts that govern every sacrifice from the cosmic fire-altar to the domestic hearth to the rules of social life.</p>
+
+  <div class="panel">
+    <h3>The Three Branches of Kalpa Literature</h3>
+    <table class="chron">
+      <tr><th>Branch</th><th>Domain</th><th>Principal Texts</th><th>Date Range</th><th>Significance</th></tr>
+      <tr>
+        <td class="shastra">Śrauta Sūtras</td>
+        <td>Public, large-scale Vedic sacrifice (śrauta = "from śruti")</td>
+        <td>Āśvalāyana, Śāṅkhāyana (Ṛgveda); Āpastamba, Baudhāyana (Black Yajurveda); Kātyāyana (White Yajurveda)</td>
+        <td class="era">~700–400 BCE</td>
+        <td class="note">The most technically elaborate śāstric literature in the Vedic tradition; details every action, every mantra, every fire-altar geometry for major public sacrifices. Directly continuous with the Brāhmaṇa literature's ritual explanations, now systematised into a pure rule-code.</td>
+      </tr>
+      <tr>
+        <td class="shastra">Gṛhya Sūtras</td>
+        <td>Domestic (household) ritual</td>
+        <td>Āśvalāyana, Śāṅkhāyana, Pāraskara, Āpastamba, Baudhāyana Gṛhyasūtras</td>
+        <td class="era">~600–300 BCE</td>
+        <td class="note">Govern the saṁskāras (life-cycle rites) from conception through death; the template for wedding, birth, naming, initiation, and funeral rituals still performed today. The most directly socially continuous śāstric tradition — its practical prescriptions remain recognisable in South Asian Hindu ceremonies across four thousand years of transmission.</td>
+      </tr>
+      <tr>
+        <td class="shastra">Dharma Sūtras</td>
+        <td>Social conduct, legal norms, varṇāśrama duties</td>
+        <td>Āpastamba, Baudhāyana, Gautama, Vasiṣṭha Dharmasūtras</td>
+        <td class="era">~500–200 BCE</td>
+        <td class="note">The direct predecessors of the Dharmaśāstra (law) tradition; articulate the varṇa (social class) duties, āśrama (life-stage) obligations, and penance rules. From these sūtras will grow the great Dharmaśāstra literature of the classical period (Part II).</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>The Sūtra Form — Śāstra's Chosen Vehicle</h3>
+      <p>The emergence of the <span class="iast">sūtra</span> style — an aphoristic, maximally compressed rule-formulation designed for memorisation — is itself one of the most significant events in the history of Indian scholarship. A sūtra (literally "thread") is a sentence reduced to the minimum syllables necessary to convey a complete, unambiguous rule. The Kalpa Sūtras are the laboratory in which this technique is first developed at scale. Pāṇini's Aṣṭādhyāyī (c. 4th century BCE) takes the technique to its absolute limit — rules like "i‑k" meaning "replace a vowel with its semi-vowel counterpart" — but the method itself is already fully established in the Kalpa Sūtra tradition.</p>
+      <p>The sūtra form makes the śāstric enterprise simultaneously more powerful and more dependent on oral commentary: a sūtra text without its accompanying oral explanation (<span class="iast">vṛtti</span> or <span class="iast">bhāṣya</span>) is often deliberately opaque to an uninitiated reader. This creates and sustains the teacher-student transmission chain (guru-paramparā) that the entire Indian educational model is built around.</p>
+    </div>
+    <div class="panel">
+      <h3>Śulba Sūtras — Geometry Within Ritual</h3>
+      <p>The <span class="iast">Śulba Sūtras</span> ("rules of the cord") are appendices to the Śrauta Sūtras specifying the exact geometric construction of Vedic fire altars. The four principal texts — by Baudhāyana, Āpastamba, Kātyāyana, and Mānava — contain:</p>
+      <ul style="padding-left:18px;font-size:15px;line-height:2;">
+        <li>The statement of the Pythagorean theorem, several centuries before Pythagoras (~800 BCE, Baudhāyana)</li>
+        <li>Methods for constructing a square equal in area to a given circle and vice versa (squaring the circle)</li>
+        <li>Systematic use of irrational numbers in construction calculations</li>
+        <li>The first known statements of what are now called Pythagorean triples</li>
+      </ul>
+      <p style="font-size:14.5px;color:var(--text-faint);">The Śulba Sūtras demonstrate that the most advanced mathematics of the Vedic period was generated entirely within the context of ritual śāstra — geometry was developed in order to build fire altars correctly, not as an independent abstraction. Śāstra is, from the beginning, applied knowledge.</p>
+    </div>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-first-shastra')">← आद्यशास्त्रम्</span>
+    <span class="fn-btn" onclick="showSection('s-dharma')">Next: धर्मसूत्र →</span>
+  </div>
+</section>
+
+<!-- ═══ S8 DHARMA SUTRA ═══ -->
+<section class="section hidden" id="s-dharma">
+  <div class="eyebrow">अध्यायः ७ · Law and Society</div>
+  <h2 class="title"><span class="dn">धर्मसूत्राणि</span>The Dharma Sūtras — When Ritual Śāstra Became Social Law</h2>
+  <p class="lede">The Dharma Sūtras mark a pivotal conceptual transition in the history of the śāstras: from the regulation of ritual actions (what the priest must do at the altar) to the regulation of social life (what every person must do by virtue of their place in the social order). This extension transforms śāstra from a specialist's tool into a framework for governing entire communities.</p>
+
+  <div class="panel">
+    <h3>The Four Principal Dharma Sūtrakāras</h3>
+    <table class="chron">
+      <tr><th>Author</th><th>Text</th><th>School Affiliation</th><th>Date</th><th>Key Contribution</th></tr>
+      <tr>
+        <td class="shastra">Āpastamba</td><td>Āpastamba Dharmasūtra</td><td>Taittirīya (Black Yajurveda)</td>
+        <td class="era">~600–300 BCE</td>
+        <td class="note">The oldest surviving Dharma Sūtra; relatively liberal in its prescriptions; particularly detailed on studentship (brahmacarya) and the teacher-student relationship — a direct reflection of the śāstric transmission system itself.</td>
+      </tr>
+      <tr>
+        <td class="shastra">Baudhāyana</td><td>Baudhāyana Dharmasūtra</td><td>Taittirīya (Black Yajurveda)</td>
+        <td class="era">~500–300 BCE</td>
+        <td class="note">Among the most comprehensive; its Śrauta, Gṛhya, and Dharma Sūtras together constitute the most complete Vedic school manual to survive. Particularly important for South Indian Brahminical tradition.</td>
+      </tr>
+      <tr>
+        <td class="shastra">Gautama</td><td>Gautama Dharmasūtra</td><td>Sāmaveda</td>
+        <td class="era">~500–300 BCE</td>
+        <td class="note">The Sāmaveda's contribution to Dharma literature; later particularly authoritative in discussions of prāyaścitta (expiation/penance).</td>
+      </tr>
+      <tr>
+        <td class="shastra">Vasiṣṭha</td><td>Vasiṣṭha Dharmasūtra</td><td>Ṛgveda</td>
+        <td class="era">~400–200 BCE</td>
+        <td class="note">Attributed to the ṛṣi Vasiṣṭha's lineage; notable for its relatively comprehensive treatment of strīdharma (duties of women) — a subject later Dharmaśāstra texts will debate at length.</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h3>The Conceptual Achievement: Dharma as a Total Account</h3>
+    <p>What the Dharma Sūtra authors accomplished — and what their successors the Dharmaśāstra authors (Manu, Yājñavalkya, Nārada — all Part II) will build on — is the articulation of <span class="iast">dharma</span> as a total, coherent account of correct social ordering. By the time of Āpastamba and Baudhāyana, "dharma" has expanded from "the right way to perform a rite" (its original Vedic sense, from dhṛ, "to sustain/support") to "the entire set of obligations, rights, and prohibitions that constitute a person's correct life according to their varṇa and āśrama." This is the foundational conceptual contribution from which all later Indian jurisprudence, social ethics, and political philosophy will grow.</p>
+    <p>The Dharma Sūtras also mark the first point at which the śāstric tradition explicitly acknowledges the tension between different sources of authority — Vedic śruti, smṛti (remembered tradition), ācāra (local custom), and ātmatuṣṭi (self-satisfaction) — and begins developing the tools for resolving conflicts between them. This hermeneutic enterprise will become one of the most sophisticated strands of Indian philosophical jurisprudence, culminating in the great commentatorial tradition on Manusmṛti and Yājñavalkyasmṛti (Part II).</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-kalpa')">← कल्पसूत्र</span>
+    <span class="fn-btn" onclick="showSection('s-summary1')">Next: सारः →</span>
+  </div>
+</section>
+
+<!-- ═══ S9 SUMMARY ═══ -->
+<section class="section hidden" id="s-summary1">
+  <div class="eyebrow">उपसंहारः · Part I Conclusion</div>
+  <h2 class="title"><span class="dn">भागसारः</span>Part I Summary — The Foundational Architecture</h2>
+  <p class="lede">Part I has traced the emergence of the śāstric tradition from its roots in Vedic revelation through the development of the Vedāṅgas and the early sūtra literature. Before moving to Part II's classical elaboration, it is worth naming explicitly what the Vedic period bequeathed.</p>
+
+  <div class="grid3">
+    <div class="panel">
+      <h3>What the Vedic Period Established</h3>
+      <ul style="padding-left:18px;font-size:15px;line-height:2;">
+        <li>The primacy of <em>sound</em> as the first domain requiring systematic treatment</li>
+        <li>The sūtra format as the śāstric vehicle of choice</li>
+        <li>Six named disciplinary domains (Vedāṅgas) with distinct methodologies</li>
+        <li>The teacher-student chain as the transmission mechanism</li>
+        <li>The school (śākhā) as the institutional unit of knowledge</li>
+        <li>The distinction between Śruti-authority and śāstric-authority</li>
+        <li>Formal geometry (Śulba Sūtras) within ritual science</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>The Four Living Inheritances</h3>
+      <p style="font-size:15px;">Four specific inheritances from this period are not historical curiosities but living practices in 2025:</p>
+      <ul style="padding-left:18px;font-size:15px;line-height:2;">
+        <li>Vedic recitation in all its pāṭha styles, still performed and taught</li>
+        <li>The Gṛhya Sūtra saṁskāras, still the template for Hindu life-cycle rituals</li>
+        <li>Pāṇini's grammar, still the authoritative grammar for Sanskrit</li>
+        <li>The varṇāśrama-dharma framework of the Dharma Sūtras, still the legal-philosophical reference point in many Hindu contexts</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>What Part II Will Show</h3>
+      <p style="font-size:15px;">Part II (approximately 600 BCE – 300 CE) will show this foundational layer flowering into full classical elaboration: the great grammars, the philosophical darśanas, the legal codes, the first medical compendiums, the Nāṭyaśāstra, and the two epics — all of which use the Vedāṅga infrastructure as their foundation while transforming it into something far larger and more diverse.</p>
+      <div style="margin-top:16px;">
+        <span class="tag veda">Part I</span><span class="tag gold">Part II →</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>The Connecting Thread Back to Śabda-Brahman</h3>
+    <p>The <em>Śabda-Brahman</em> resource's philosophical claim — that sound is the generative matrix of the manifest universe — now has its historical context. That claim is not an anomalous mystical assertion floating free of institutional history; it is the philosophical crystallisation of what the entire Vedāṅga tradition was practically enacting when it treated phonetic precision as the highest intellectual priority. The tradition that spent a millennium perfecting the tools to preserve every phoneme of the Veda exactly was simultaneously and necessarily building a civilisational consensus that <em>sound matters in a way nothing else does</em>. The philosophy of Śabda-Brahman is the explicit statement of what the practitioner of ghana-pāṭha already knew implicitly: the exact form of a sound is not decorative but constitutive. Every śāstra that follows, in Part II and beyond, is built on this foundation.</p>
+  </div>
+
+  <div class="footer-nav">
+    <span class="fn-btn" onclick="showSection('s-dharma')">← धर्मसूत्र</span>
+    <a class="fn-btn" href="shastra-series-part2.html">Continue to Part II →</a>
+  </div>
+</section>
+
+</div><!-- /sections-root -->
+</main>
+</div>
+
+<button class="menu-toggle" id="menuToggle">☰</button>
+
+<script>
+const navlinks = document.querySelectorAll('.navlink');
+const tabbtns  = document.querySelectorAll('.tabbtn');
+const sections = document.querySelectorAll('.section');
+const crumb    = document.getElementById('crumb');
+
+function showSection(id){
+  sections.forEach(s => s.classList.toggle('hidden', s.id !== id));
+  navlinks.forEach(l => l.classList.toggle('active', l.dataset.target === id));
+  tabbtns.forEach(t  => t.classList.toggle('active',  t.dataset.target === id));
+  const activeTab = document.querySelector('.tabbtn[data-target="'+id+'"]');
+  if(activeTab) crumb.textContent = activeTab.textContent;
+  window.scrollTo({top:0, behavior:'smooth'});
+  document.getElementById('sidebar').classList.remove('open');
+  history.replaceState(null,'','#'+id);
+  const tb = document.getElementById('tabbar');
+  if(activeTab) activeTab.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+}
+navlinks.forEach(l => l.addEventListener('click', () => showSection(l.dataset.target)));
+tabbtns.forEach(t  => t.addEventListener('click', () => showSection(t.dataset.target)));
+document.getElementById('menuToggle').addEventListener('click', () => {
+  document.getElementById('sidebar').classList.toggle('open');
+});
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = location.hash.replace('#','');
+  showSection(hash && document.getElementById(hash) ? hash : 's-intro');
+});
+</script>
+</body>
+</html>
